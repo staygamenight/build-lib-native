@@ -90,7 +90,7 @@ jobs:
           cat pipgrip.lock
       
       - name: Upload ZIP artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: mydist
           path: /home/runner/.local/share/python-for-android/dists/mydist.zip
