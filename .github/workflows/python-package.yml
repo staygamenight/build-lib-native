@@ -41,7 +41,7 @@ jobs:
           source .venv/bin/activate
           pip install --upgrade pip
           pip install maturin
-          pip install git+https://github.com/flet-dev/python-for-android.git@3.11.6
+          pip install git+https://github.com/flet-dev/python-android.git@3.12
           pip install --upgrade cython pipgrip
           
       - name: Extract dependencies with pipgrip
