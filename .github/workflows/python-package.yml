@@ -88,6 +88,7 @@ jobs:
           wget https://github.com/Kitware/CMake/releases/download/v4.1.0-rc4/cmake-4.1.0-rc4.tar.gz
           tar -xvf cmake-4.1.0-rc4.tar.gz -C $HOME/downloads/
           cd $HOME/downloads/cmake-4.1.0-rc4/
+          ./bootstrap
           make -j8
           sudo make install
           
