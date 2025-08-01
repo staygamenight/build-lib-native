@@ -79,7 +79,9 @@ jobs:
           tar -xvf gcc-arm64-linux-x86_64.tar.bz2 -C $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/
           mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/bin/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin
           mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/lib/gcc/aarch64-linux-android/4.9.x/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/aarch64-linux-android/4.9.x
-          mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android
+          mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/bin/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/bin
+          mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/lib64/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/lib64
+          mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/lib/ldscripts/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/lib/ldscripts
 
       - name: Build Android Package
         id: build_package
