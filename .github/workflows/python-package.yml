@@ -82,8 +82,14 @@ jobs:
           mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/bin/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/bin
           mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/lib64/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/lib64
           mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/lib/ldscripts/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/lib/ldscripts
-          
-          sudo apt install cmake
+
+          mkdir $HOME/downloads
+          wget https://github.com/Kitware/CMake/releases/download/v4.1.0-rc4/cmake-4.1.0-rc4.tar.gz
+          tar -xvf cmake-4.1.0-rc4.tar.gz -C $HOME/downloads/
+          cd $HOME/downloads/cmake-4.1.0/
+          ./bootstrap
+          make -j8
+          sudo make install
           
       - name: Build Android Package
         id: build_package
