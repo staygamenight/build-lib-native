@@ -74,7 +74,8 @@ jobs:
           
       - name: Install Android NDK
         run: |
-          NDK_VERSION="28.2.13676358"
+          #28.2.13676358
+          NDK_VERSION="25.2.9519653"
           NDK_VERSION_LEGACY="21.4.7075529"
           yes | $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --install "ndk;$NDK_VERSION_LEGACY" --channel=3
           yes | $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --install "ndk;$NDK_VERSION" --channel=3
