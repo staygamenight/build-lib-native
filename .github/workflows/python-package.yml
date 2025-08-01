@@ -76,11 +76,11 @@ jobs:
         id: build_package
         run: |
           sudo apt install libltdl-dev
-          sudo apt-get install gcc-11 g++-11
-          rm -rf build
-          export CXX=/usr/bin/g++-11
+          #sudo apt-get install gcc-11 g++-11
+          #rm -rf build
+          #export CXX=/usr/bin/g++-11
           #sudo apt install update-alternatives
-          sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 60 --slave /usr/bin/g++ g++ /usr/bin/g++-11
+          #sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 60 --slave /usr/bin/g++ g++ /usr/bin/g++-11
           #cmake -S . -B build
           source .venv/bin/activate  # Activate virtual environment
           p4a create --requirements=$(paste -s -d, pipgrip.lock) --arch arm64-v8a --arch armeabi-v7a --arch x86_64 --sdk-dir $ANDROID_SDK_ROOT --ndk-dir $ANDROID_NDK_HOME --dist-name mydist
