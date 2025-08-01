@@ -61,7 +61,7 @@ jobs:
           echo "ANDROID_NDK_HOME=/home/runner/Android/Sdk/ndk/25.2.9519653" >> $GITHUB_ENV
           echo "PATH=$PATH:$HOME/Android/Sdk/cmdline-tools/latest/bin:$HOME/Android/Sdk/platform-tools:$ANDROID_NDK_HOME" >> $GITHUB_ENV
 
-          yes | $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.0"
+          yes | $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --install "platform-tools" "platforms;android-36" "build-tools;36.0.0"
           $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --list
       - name: Remove version
         run: |
@@ -69,7 +69,7 @@ jobs:
           
       - name: Install Android NDK
         run: |
-          NDK_VERSION="25.2.9519653"
+          NDK_VERSION="28.2.13676358"
           yes | $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --install "ndk;$NDK_VERSION" --channel=3
 
       - name: Build Android Package
