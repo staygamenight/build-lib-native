@@ -76,7 +76,7 @@ jobs:
           yes | $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --install "ndk;$NDK_VERSION" --channel=3
 
           wget https://github.com/mzakharo/android-gfortran/releases/download/r21e/gcc-arm64-linux-x86_64.tar.bz2
-          tar -xvf gcc-arm64-linux-x86_64.tar.bz2 -d $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/
+          tar xvf gcc-arm64-linux-x86_64.tar.bz2 -d $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/
           mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/gcc-arm64-linux-x86_64/aarch64-linux-android-4.9/bin/ $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/
 
       - name: Build Android Package
