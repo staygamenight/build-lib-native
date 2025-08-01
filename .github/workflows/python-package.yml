@@ -33,7 +33,11 @@ jobs:
           fi
           cat requirements.txt
           
-      
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gettext libiconv-hook-dev autoconf automake \
+            libtool pkg-config m4 libtool-bin libltdl-dev
 
       - name: Install Python Dependencies
         run: |
@@ -85,7 +89,8 @@ jobs:
 
           sudo apt remove --purge --auto-remove
           mkdir $HOME/downloads
-          wget https://github.com/Kitware/CMake/releases/download/v4.1.0-rc4/cmake-4.1.0-rc4.tar.gz
+          #wget https://github.com/Kitware/CMake/releases/download/v4.1.0-rc4/cmake-4.1.0-rc4.tar.gz
+          wget https://cmake.org/files/v3.4/cmake-3.4.3.tar.gz
           tar -xvf cmake-3.4.3.tar.gz -C $HOME/downloads/
           cd $HOME/downloads/cmake-3.4.3/
           ./bootstrap
@@ -95,7 +100,7 @@ jobs:
       - name: Build Android Package
         id: build_package
         run: |
-          sudo apt install libltdl-dev
+          #sudo apt install libltdl-dev
           #sudo apt-get install gcc-11 g++-11
           #rm -rf build
           #export CXX=/usr/bin/g++-11
