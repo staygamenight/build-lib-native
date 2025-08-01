@@ -87,6 +87,7 @@ jobs:
           mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/bin/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/bin
           mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/lib64/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/lib64
           mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/lib/ldscripts/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/lib/ldscripts
+          mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/libexec/gcc/aarch64-linux-android/4.9.x/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/libexec/gcc/aarch64-linux-android/4.9.x
 
           sudo apt remove --purge --auto-remove
           mkdir $HOME/downloads
@@ -98,7 +99,7 @@ jobs:
           make -j8
           sudo make install
 
-          sed -ne '/ENABLE_LANGUAGES/s/c,c++/c,c++,fortran/g' $HOME/Android/Sdk/ndk/21.4.7075529/toolchain/lib/gcc/build-gcc.sh
+          #sed -ne '/ENABLE_LANGUAGES/s/c,c++/c,c++,fortran/g' $HOME/Android/Sdk/ndk/21.4.7075529/toolchain/lib/gcc/build-gcc.sh
           
       - name: Build Android Package
         id: build_package
