@@ -98,7 +98,7 @@ jobs:
           make -j8
           sudo make install
 
-          sed -ne '/ENABLE_LANGUAGES/s/c,c++/c,c++,fortran/g' $HOME/Android/Sdk/ndk/21.4.7075529/toolchain/gcc/build-gcc.sh
+          sed -ne '/ENABLE_LANGUAGES/s/c,c++/c,c++,fortran/g' $HOME/Android/Sdk/ndk/21.4.7075529/toolchain/lib/gcc/build-gcc.sh
           
       - name: Build Android Package
         id: build_package
