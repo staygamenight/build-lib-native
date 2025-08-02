@@ -157,7 +157,7 @@ jobs:
           
           # updates Android SDK, install Android API, Build Tools and accept licenses
           # update_android_sdk:
-          	touch $ANDROID_HOME/repositories.cfg
+          	touch /home/runner/.android/repositories.cfg
           	yes | $ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME --licenses > /dev/null
           	$ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME "build-tools;$ANDROID_SDK_BUILD_TOOLS_VERSION" > /dev/null
           	$ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME "platforms;android-$ANDROID_API_LEVEL" > /dev/null
