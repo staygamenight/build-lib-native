@@ -6,19 +6,21 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  ## Those android NDK/SDK variables can be override when running the file
+  ANDROID_NDK_VERSION: 28c
+  ANDROID_NDK_VERSION_LEGACY: 21e
+  ANDROID_SDK_TOOLS_VERSION: 6514223
+  ANDROID_SDK_BUILD_TOOLS_VERSION: 29.0.3
+  ANDROID_HOME: /home/runner/Android
+  ANDROID_API_LEVEL: 36
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    
-    env:
-      ## Those android NDK/SDK variables can be override when running the file
-      echo "ANDROID_NDK_VERSION=28c" >> $GITHUB_ENV
-      echo "ANDROID_NDK_VERSION_LEGACY=21e" >> $GITHUB_ENV
-      echo "ANDROID_SDK_TOOLS_VERSION=6514223" >> $GITHUB_ENV
-      echo "ANDROID_SDK_BUILD_TOOLS_VERSION=29.0.3" >> $GITHUB_ENV
-      echo "ANDROID_HOME=/home/runner/Android" >> $GITHUB_ENV
-      echo "ANDROID_API_LEVEL=36" >> $GITHUB_ENV
+  
       ## per OS dictionary-like    
+    env:
       ANDROID_SDK_HOME: $ANDROID_HOME/android-sdk
       ANDROID_SDK_TOOLS_ARCHIVE: commandlinetools-linux-$ANDROID_SDK_TOOLS_VERSION_latest.zip
       ANDROID_SDK_TOOLS_DL_URL: https://dl.google.com/android/repository/$ANDROID_SDK_TOOLS_ARCHIVE
@@ -83,6 +85,14 @@ jobs:
           
       - name: Set up Android SDK
         run: |
+          ## Those android NDK/SDK variables can be override when running the file
+          echo "ANDROID_NDK_VERSION=28c" >> $GITHUB_ENV
+          echo "ANDROID_NDK_VERSION_LEGACY=21e" >> $GITHUB_ENV
+          echo "ANDROID_SDK_TOOLS_VERSION=6514223" >> $GITHUB_ENV
+          echo "ANDROID_SDK_BUILD_TOOLS_VERSION=29.0.3" >> $GITHUB_ENV
+          echo "ANDROID_HOME=/home/runner/Android" >> $GITHUB_ENV
+          echo "ANDROID_API_LEVEL=36" >> $GITHUB_ENV
+          
           #mkdir -p $HOME/Android/Sdk/cmdline-tools
           #wget https://dl.google.com/android/repository/commandlinetools-linux-7302050_latest.zip
           #unzip commandlinetools-linux-7302050_latest.zip -d $HOME/Android/Sdk/cmdline-tools/
