@@ -20,7 +20,7 @@ jobs:
       
     ## per OS dictionary-like    
       ANDROID_SDK_HOME: $ANDROID_HOME/android-sdk
-      ANDROID_SDK_TOOLS_ARCHIVE: commandlinetools-linux-${{ANDROID_SDK_TOOLS_VERSION}}_latest.zip
+      ANDROID_SDK_TOOLS_ARCHIVE: commandlinetools-linux-${{build.env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip
       ANDROID_SDK_TOOLS_DL_URL: https://dl.google.com/android/repository/${{env.ANDROID_SDK_TOOLS_ARCHIVE}}
       
       ANDROID_NDK_HOME: $ANDROID_HOME/android-ndk
