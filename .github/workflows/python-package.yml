@@ -18,26 +18,18 @@ jobs:
       ANDROID_HOME: /home/runner/Android
       ANDROID_API_LEVEL: 36
       
-    ## per OS dictionary-like
-      UNAME_S: $(shell uname -s)
-      TARGET_OS_Linux : linux
-      TARGET_OS_ALIAS_Linux :  $(TARGET_OS_Linux)
-      TARGET_OS_Darwin : darwin"
-      TARGET_OS_ALIAS_Darwin :  "mac"
-      TARGET_OS :  $(TARGET_OS_$(UNAME_S))
-      TARGET_OS_ALIAS :  $(TARGET_OS_ALIAS_$(UNAME_S))
-      
+    ## per OS dictionary-like    
       ANDROID_SDK_HOME: $(ANDROID_HOME)/android-sdk
-      ANDROID_SDK_TOOLS_ARCHIVE: commandlinetools-$(TARGET_OS_ALIAS)-$(ANDROID_SDK_TOOLS_VERSION)_latest.zip
+      ANDROID_SDK_TOOLS_ARCHIVE: commandlinetools-linux-$(ANDROID_SDK_TOOLS_VERSION)_latest.zip
       ANDROID_SDK_TOOLS_DL_URL: https://dl.google.com/android/repository/$(ANDROID_SDK_TOOLS_ARCHIVE)
       
       ANDROID_NDK_HOME: $(ANDROID_HOME)/android-ndk
       ANDROID_NDK_FOLDER: $(ANDROID_HOME)/android-ndk-r$(ANDROID_NDK_VERSION)
-      ANDROID_NDK_ARCHIVE: android-ndk-r$(ANDROID_NDK_VERSION)-$(TARGET_OS).zip
+      ANDROID_NDK_ARCHIVE: android-ndk-r$(ANDROID_NDK_VERSION)-linux.zip
       
       ANDROID_NDK_HOME_LEGACY: $(ANDROID_HOME)/android-ndk-legacy
       ANDROID_NDK_FOLDER_LEGACY: $(ANDROID_HOME)/android-ndk-r$(ANDROID_NDK_VERSION_LEGACY)
-      ANDROID_NDK_ARCHIVE_LEGACY: android-ndk-r$(ANDROID_NDK_VERSION_LEGACY)-$(TARGET_OS)-x86_64.zip
+      ANDROID_NDK_ARCHIVE_LEGACY: android-ndk-r$(ANDROID_NDK_VERSION_LEGACY)-linux-x86_64.zip
       
       ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64: gcc-arm64-linux-x86_64.tar.bz2
       ANDROID_NDK_GFORTRAN_ARCHIVE_ARM: gcc-arm-linux-x86_64.tar.bz2
@@ -106,7 +98,6 @@ jobs:
           #yes | $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.0"
           #$HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --list
           
-          $(info Target install OS is          : $(TARGET_OS))
           $(info Android SDK home is           : $(ANDROID_SDK_HOME))
           $(info Android NDK home is           : $(ANDROID_NDK_HOME))
           $(info Android NDK Legacy  home is   : $(ANDROID_NDK_HOME_LEGACY))
