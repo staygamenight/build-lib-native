@@ -12,16 +12,16 @@ jobs:
     
     env:
       ## Those android NDK/SDK variables can be override when running the file
-        NDK_VERSION: 28c
-        NDK_VERSION_LEGACY: 21e
-        SDK_TOOLS_VERSION: 6514223
-        SDK_BUILD_TOOLS_VERSION: 29.0.3
+        ANDROID_NDK_VERSION: 28c
+        ANDROID_NDK_VERSION_LEGACY: 21e
+        ANDROID_SDK_TOOLS_VERSION: 6514223
+        ANDROID_SDK_BUILD_TOOLS_VERSION: 29.0.3
         ANDROID_HOME: /home/runner/Android
         ANDROID_API_LEVEL: 36
         
       ## per OS dictionary-like    
         ANDROID_SDK_HOME: $ANDROID_HOME/android-sdk
-        ANDROID_SDK_TOOLS_ARCHIVE: commandlinetools-linux-${{ANDROID_SDK_TOOLS_VERSION}}_latest.zip
+        ANDROID_SDK_TOOLS_ARCHIVE: commandlinetools-linux-${{env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip
         ANDROID_SDK_TOOLS_DL_URL: https://dl.google.com/android/repository/${{env.ANDROID_SDK_TOOLS_ARCHIVE}}
         
         ANDROID_NDK_HOME: $ANDROID_HOME/android-ndk
