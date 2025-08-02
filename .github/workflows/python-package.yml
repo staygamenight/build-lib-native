@@ -106,7 +106,7 @@ jobs:
           #yes | $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.0"
           #$HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --list
           
-          $(info Target install OS is          : $(target_os))
+          $(info Target install OS is          : $(TARGET_OS))
           $(info Android SDK home is           : $(ANDROID_SDK_HOME))
           $(info Android NDK home is           : $(ANDROID_NDK_HOME))
           $(info Android NDK Legacy  home is   : $(ANDROID_NDK_HOME_LEGACY))
