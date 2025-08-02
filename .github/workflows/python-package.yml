@@ -71,10 +71,10 @@ jobs:
           #$HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --list
 
           ## Those android NDK/SDK variables can be override when running the file
-          ANDROID_NDK_VERSION = "28c"
-          ANDROID_NDK_VERSION_LEGACY = "21e"
-          ANDROID_SDK_TOOLS_VERSION = "6514223"
-          ANDROID_SDK_BUILD_TOOLS_VERSION = "29.0.3"
+          NDK_VERSION = "28c"
+          NDK_VERSION_LEGACY = "21e"
+          SDK_TOOLS_VERSION = "6514223"
+          SDK_BUILD_TOOLS_VERSION = "29.0.3"
           ANDROID_HOME = "/home/runner/Android"
           ANDROID_API_LEVEL = "36"
           
