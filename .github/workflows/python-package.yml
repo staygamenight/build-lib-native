@@ -66,6 +66,7 @@ jobs:
           pipgrip $(cat requirements.txt) --lock
 
       - name: Set variables
+        id: variable
         run: | 
           echo ${{env.ANDROID_NDK_VERSION}}
           echo ${{env.ANDROID_NDK_VERSION_LEGACY}}
@@ -120,7 +121,7 @@ jobs:
           
           # download_android_sdk:
           	curl --location --progress-bar --continue-at - \
-          	${{env.ANDROID_SDK_TOOLS_DL_URL}} --output ${{env.ANDROID_SDK_TOOLS_ARCHIVE}}
+          	${{variable.env.ANDROID_SDK_TOOLS_DL_URL}} --output ${{variable.env.ANDROID_SDK_TOOLS_ARCHIVE}}
           
           # download_android_ndk:
             curl --location --progress-bar --continue-at - \
