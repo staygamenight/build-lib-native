@@ -121,7 +121,7 @@ jobs:
           
           # download_android_sdk:
           	curl --location --progress-bar --continue-at - \
-          	${{variable.env.ANDROID_SDK_TOOLS_DL_URL}} --output ${{variable.env.ANDROID_SDK_TOOLS_ARCHIVE}}
+          	${{jobs.variable.env.ANDROID_SDK_TOOLS_DL_URL}} --output ${{jobs.variable.env.ANDROID_SDK_TOOLS_ARCHIVE}}
           
           # download_android_ndk:
             curl --location --progress-bar --continue-at - \
