@@ -63,7 +63,7 @@ jobs:
 
           echo "ANDROID_SDK_ROOT=$HOME/Android/Sdk" >> $GITHUB_ENV
           echo "SDK_ROOT=$HOME/Android/Sdk" >> $GITHUB_ENV
-          echo "ANDROID_NDK_HOME=/home/runner/Android/Sdk/ndk/27.3.13750724" >> $GITHUB_ENV
+          echo "ANDROID_NDK_HOME=/home/runner/Android/Sdk/ndk/28.2.13676358" >> $GITHUB_ENV
           echo "LEGACY_NDK=/home/runner/Android/Sdk/ndk/21.4.7075529" >> $GITHUB_ENV
           echo "PATH=$PATH:$HOME/Android/Sdk/cmdline-tools/latest/bin:$HOME/Android/Sdk/platform-tools:$ANDROID_NDK_HOME" >> $GITHUB_ENV
 
@@ -76,7 +76,7 @@ jobs:
           
       - name: Install Android NDK
         run: |
-          NDK_VERSION="27.3.13750724"
+          NDK_VERSION="28.2.13676358"
           NDK_VERSION_LEGACY="21.4.7075529"
           yes | $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --install "ndk;$NDK_VERSION_LEGACY" --channel=3
           yes | $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --install "ndk;$NDK_VERSION" --channel=3
@@ -86,12 +86,12 @@ jobs:
           https://github.com/mzakharo/android-gfortran/releases/download/r21e/gcc-arm64-linux-x86_64.tar.bz2 --output gcc-arm64-linux-x86_64.tar.bz2
           rm -rf $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/ \
           && mkdir  $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/ \
-          && tar -xf $(ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64) -C HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/ --strip-components 1 \
+          && tar -xf $(ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64) -C $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/ --strip-components 1 \
           && rm -f $(ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64)
 
           #wget https://github.com/mzakharo/android-gfortran/releases/download/r21e/gcc-arm64-linux-x86_64.tar.bz2
           #tar -xvf gcc-arm64-linux-x86_64.tar.bz2 -C $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/
-          mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/bin/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin
+          #mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/bin/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin
           #mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/lib/gcc/aarch64-linux-android/4.9.x/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/aarch64-linux-android/4.9.x
           #mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/bin/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/bin
           #mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/lib64/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/lib64
