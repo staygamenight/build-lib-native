@@ -140,6 +140,8 @@ jobs:
           	https://github.com/mzakharo/android-gfortran/releases/download/r${{env.ANDROID_NDK_VERSION_LEGACY}}/$ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64 --output $ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64
           	curl --location --progress-bar --continue-at - \
           	https://github.com/mzakharo/android-gfortran/releases/download/r${{env.ANDROID_NDK_VERSION_LEGACY}}/$ANDROID_NDK_GFORTRAN_ARCHIVE_ARM  --output $ANDROID_NDK_GFORTRAN_ARCHIVE_ARM
+
+            echo "https://github.com/mzakharo/android-gfortran/releases/download/r${{env.ANDROID_NDK_VERSION_LEGACY}}/$ANDROID_NDK_GFORTRAN_ARCHIVE_ARM  --output $ANDROID_NDK_GFORTRAN_ARCHIVE_ARM"
           
           # Extract android SDK and remove the compressed file
           # extract_android_sdk:
