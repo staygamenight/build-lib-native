@@ -84,7 +84,7 @@ jobs:
           echo "ANDROID_NDK_ARCHIVE=android-ndk-r${{env.ANDROID_NDK_VERSION}}-linux.zip"  >> $GITHUB_ENV
           
           echo "ANDROID_NDK_HOME_LEGACY=${{env.ANDROID_HOME}}/android-ndk-legacy"  >> $GITHUB_ENV
-          echo "ANDROID_NDK_FOLDER_LEGACY=${{env.ANDROID_HOME}}/android-ndk-r${{ANDROID_NDK_VERSION_LEGACY}}"  >> $GITHUB_ENV
+          echo "ANDROID_NDK_FOLDER_LEGACY=${{env.ANDROID_HOME}}/android-ndk-r${{env.ANDROID_NDK_VERSION_LEGACY}}"  >> $GITHUB_ENV
           echo "ANDROID_NDK_ARCHIVE_LEGACY=android-ndk-r${{env.ANDROID_NDK_VERSION_LEGACY}}-linux-x86_64.zip"  >> $GITHUB_ENV
           
           echo "ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64=gcc-arm64-linux-x86_64.tar.bz2"  >> $GITHUB_ENV
