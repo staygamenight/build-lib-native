@@ -60,6 +60,7 @@ jobs:
           pip install git+https://github.com/kivy/python-for-android.git
           pip install --upgrade cython pipgrip
           pip install setuptools==59.8.0
+          pip install numpy==1.26.4
            
       - name: Extract dependencies with pipgrip
         run: |
