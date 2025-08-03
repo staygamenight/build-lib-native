@@ -195,9 +195,9 @@ jobs:
           ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64=gcc-arm64-linux-x86_64.tar.bz2
           curl --location --progress-bar --continue-at - \
           https://github.com/mzakharo/android-gfortran/releases/download/r21e/gcc-arm64-linux-x86_64.tar.bz2 --output gcc-arm64-linux-x86_64.tar.bz2
-          rm -rf $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/ \
-          && mkdir  $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/ \
-          && tar -xf gcc-arm64-linux-x86_64.tar.bz2 -C $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/ --strip-components 1 \
+          rm -rf $HOME/Android/android-ndk-legacy/toolchains/x86_64-4.9/prebuilt/linux-x86_64/ \
+          && mkdir  $HOME/Android/android-ndk-legacy/toolchains/x86_64-4.9/prebuilt/linux-x86_64/ \
+          && tar -xf gcc-arm64-linux-x86_64.tar.bz2 -C $HOME/Android/android-ndk-legacy/toolchains/x86_64-4.9/prebuilt/linux-x86_64/ --strip-components 1 \
           && rm -f gcc-arm64-linux-x86_64.tar.bz2
 
           #wget https://github.com/mzakharo/android-gfortran/releases/download/r21e/gcc-arm64-linux-x86_64.tar.bz2
