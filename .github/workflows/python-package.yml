@@ -119,7 +119,7 @@ jobs:
           echo "info Android NDK Legacy version is : ${{steps.variable.env.ANDROID_NDK_VERSION_LEGACY}}"
           echo "info JAVA_HOME is                  : $JAVA_HOME"
           
-          echo ${{steps.variable.env.ANDROID_SDK_TOOLS_ARCHIVE}}
+          echo "${{steps.variable.env.ANDROID_SDK_TOOLS_ARCHIVE}}"
           
           # download_android_sdk:
           	curl --location --progress-bar --continue-at - \
