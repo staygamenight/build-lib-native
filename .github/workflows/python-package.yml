@@ -64,7 +64,7 @@ jobs:
       - name: Extract dependencies with pipgrip
         run: |
           source .venv/bin/activate
-          pipgrip $(cat requirements.txt) --lock
+          #pipgrip $(cat requirements.txt) --lock
           pip install setuptools==59.8.0
           pip install Cython==0.29.36
           pip install numpy==1.22.4
