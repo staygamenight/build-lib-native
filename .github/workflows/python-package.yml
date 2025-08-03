@@ -58,7 +58,7 @@ jobs:
           pip install --upgrade pip
           pip install maturin
           pip install git+https://github.com/kivy/python-for-android.git
-          pip install --upgrade pipgrip
+          pip install --upgrade cython pipgrip
           #python3 -m ensurepip --upgrade
           
       - name: Extract dependencies with pipgrip
