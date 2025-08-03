@@ -77,7 +77,7 @@ jobs:
         env:
           ANDROID_SDK_HOME: ${{env.ANDROID_HOME}}/android-sdk
           ANDROID_SDK_TOOLS_ARCHIVE: commandlinetools-linux-${{env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip
-          ANDROID_SDK_TOOLS_DL_URL: https://dl.google.com/android/repository/${{step.variable.env.ANDROID_SDK_TOOLS_ARCHIVE}}
+          ANDROID_SDK_TOOLS_DL_URL: https://dl.google.com/android/repository/${{job.build.step.variable.env.ANDROID_SDK_TOOLS_ARCHIVE}}
           
           ANDROID_NDK_HOME: ${{env.ANDROID_HOME}}/android-ndk
           ANDROID_NDK_FOLDER: ${{env.ANDROID_HOME}}/android-ndk-r${{env.ANDROID_NDK_VERSION}}
