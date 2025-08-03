@@ -33,7 +33,7 @@ jobs:
       - name: Set up Python 3
         uses: actions/setup-python@v2
         with:
-          python-version: '3.12'
+          python-version: '3.11'
 
       - name: Upload requirements.txt
         run: |
@@ -58,7 +58,7 @@ jobs:
           pip install --upgrade pip
           pip install maturin
           pip install git+https://github.com/kivy/python-for-android.git
-          pip install --upgrade cython pipgrip
+          pip install --upgrade pipgrip
           #python3 -m ensurepip --upgrade
           
       - name: Extract dependencies with pipgrip
