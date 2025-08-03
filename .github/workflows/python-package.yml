@@ -33,7 +33,7 @@ jobs:
       - name: Set up Python 3
         uses: actions/setup-python@v2
         with:
-          python-version: '3.12'
+          python-version: '3.11'
 
       - name: Upload requirements.txt
         run: |
@@ -66,7 +66,7 @@ jobs:
           source .venv/bin/activate
           pipgrip $(cat requirements.txt) --lock
           pip install setuptools==59.8.0
-          pip install cython==0.29.36
+          pip install Cython==0.29.36
           pip install numpy==1.22.4
  
       - name: Set variables
