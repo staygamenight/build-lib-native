@@ -50,6 +50,7 @@ jobs:
           sudo apt-get install -y gettext libiconv-hook-dev autoconf automake \
             libtool pkg-config m4 libtool-bin libltdl-dev
           sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
+          sudo apt-get install python3.11-distutils
 
       - name: Install Python Dependencies
         run: |
@@ -64,7 +65,7 @@ jobs:
       - name: Extract dependencies with pipgrip
         run: |
           source .venv/bin/activate
-          #pipgrip $(cat requirements.txt) --lock
+          pipgrip $(cat requirements.txt) --lock
           pip install setuptools==59.8.0
           pip install Cython==3.0.0
           pip install numpy==1.22.4
@@ -183,7 +184,7 @@ jobs:
           
       - name: Remove version
         run: |
-          #sed -i 's/==.*//g' pipgrip.lock
+          sed -i 's/==.*//g' pipgrip.lock
           
       - name: Install Android NDK
         run: |
@@ -221,8 +222,8 @@ jobs:
       
       - name: List zip files
         run: |
-          #ls -la
-          #cat pipgrip.lock
+          ls -la
+          cat pipgrip.lock
       
       - name: Upload ZIP artifact
         uses: actions/upload-artifact@v4
