@@ -109,14 +109,14 @@ jobs:
           #yes | $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.0"
           #$HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --list
           
-          echo "info Android SDK home is           : ${{env.ANDROID_SDK_HOME}}"
-          echo "info Android NDK home is           : ${{env.ANDROID_NDK_HOME}}"
-          echo "info Android NDK Legacy  home is   : ${{env.ANDROID_NDK_HOME_LEGACY}}"
-          echo "info Android SDK download url is   : ${{env.ANDROID_SDK_TOOLS_DL_URL}}"
-          echo "info Android NDK download url is   : ${{env.ANDROID_NDK_DL_URL}}"
-          echo "info Android API level is          : ${{env.ANDROID_API_LEVEL}}"
-          echo "info Android NDK version is        : ${{env.ANDROID_NDK_VERSION}}"
-          echo "info Android NDK Legacy version is : ${{env.ANDROID_NDK_VERSION_LEGACY}}"
+          echo "info Android SDK home is           : ${{steps.variable.env.ANDROID_SDK_HOME}}"
+          echo "info Android NDK home is           : ${{steps.variable.env.ANDROID_NDK_HOME}}"
+          echo "info Android NDK Legacy  home is   : ${{steps.variable.env.ANDROID_NDK_HOME_LEGACY}}"
+          echo "info Android SDK download url is   : ${{steps.variable.env.ANDROID_SDK_TOOLS_DL_URL}}"
+          echo "info Android NDK download url is   : ${{steps.variable.env.ANDROID_NDK_DL_URL}}"
+          echo "info Android API level is          : ${{steps.variable.env.ANDROID_API_LEVEL}}"
+          echo "info Android NDK version is        : ${{steps.variable.env.ANDROID_NDK_VERSION}}"
+          echo "info Android NDK Legacy version is : ${{steps.variable.env.ANDROID_NDK_VERSION_LEGACY}}"
           echo "info JAVA_HOME is                  : $JAVA_HOME"
           
           # download_android_sdk:
