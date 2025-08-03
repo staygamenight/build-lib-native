@@ -1,2 +1,4 @@
 librosa
 numpy==1.26.4
+cython==0.29.36
+scikit-learn==0.23
