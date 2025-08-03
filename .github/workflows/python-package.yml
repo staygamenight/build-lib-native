@@ -183,7 +183,7 @@ jobs:
           
       - name: Remove version
         run: |
-          sed -i 's/==.*//g' pipgrip.lock
+          #sed -i 's/==.*//g' pipgrip.lock
           
       - name: Install Android NDK
         run: |
@@ -255,8 +255,8 @@ jobs:
       
       - name: List zip files
         run: |
-          ls -la
-          cat pipgrip.lock
+          #ls -la
+          #cat pipgrip.lock
       
       - name: Upload ZIP artifact
         uses: actions/upload-artifact@v4
