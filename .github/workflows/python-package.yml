@@ -59,6 +59,7 @@ jobs:
           pip install maturin
           pip install git+https://github.com/kivy/python-for-android.git
           pip install --upgrade cython pipgrip
+          pip install setuptools==59.8.0
            
       - name: Extract dependencies with pipgrip
         run: |
