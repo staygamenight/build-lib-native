@@ -66,7 +66,7 @@ jobs:
           source .venv/bin/activate
           #pipgrip $(cat requirements.txt) --lock
           pip install setuptools==59.8.0
-          pip install Cython==0.29.36
+          pip install Cython==3.0.0
           pip install numpy==1.22.4
  
       - name: Set variables
@@ -199,40 +199,6 @@ jobs:
           && mkdir  $HOME/Android/android-ndk-legacy/toolchains/x86_64-4.9/prebuilt/linux-x86_64/ \
           && tar -xf gcc-arm64-linux-x86_64.tar.bz2 -C $HOME/Android/android-ndk-legacy/toolchains/x86_64-4.9/prebuilt/linux-x86_64/ --strip-components 1 \
           && rm -f gcc-arm64-linux-x86_64.tar.bz2
-
-          #wget https://github.com/mzakharo/android-gfortran/releases/download/r21e/gcc-arm64-linux-x86_64.tar.bz2
-          #tar -xvf gcc-arm64-linux-x86_64.tar.bz2 -C $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/
-          #mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/bin/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin
-          #mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/lib/gcc/aarch64-linux-android/4.9.x/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/aarch64-linux-android/4.9.x
-          #mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/bin/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/bin
-          #mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/lib64/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/lib64
-          #mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/aarch64-linux-android/lib/ldscripts/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/aarch64-linux-android/lib/ldscripts
-          ##mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/libexec/gcc/aarch64-linux-android/4.9.x/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/libexec/gcc/aarch64-linux-android/4.9.x
-          #mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/libexec/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/libexec
-          
-          #wget https://github.com/mzakharo/android-gfortran/releases/download/r21e/gcc-arm-linux-x86_64.tar.bz2
-          #tar -xvf gcc-arm-linux-x86_64.tar.bz2 -C $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/
-          #mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/bin/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin
-          #mv -f $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb
-          #mv -f $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/lib/gcc/arm-linux-androideabi/4.9.x/thumb/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/thumb
-          #mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/arm-linux-androideabi/bin/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/arm-linux-androideabi/bin
-          ##mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/arm-linux-androideabi/lib64/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/arm-linux-androideabi/lib64
-          ##mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/arm-linux-androideabi/lib/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/arm-linux-androideabi/lib
-          ##mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/arm-linux-androideabi/bin/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/arm-linux-androideabi/bin
-          ##mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/libexec/gcc/arm-linux-androideabi/4.9.x/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/libexec/gcc/arm-linux-androideabi/4.9.x
-          #mv $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/libexec/* $HOME/Android/Sdk/ndk/21.4.7075529/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/libexec
-          
-          #sudo apt remove --purge --auto-remove
-          #mkdir $HOME/downloads
-          ##wget https://github.com/Kitware/CMake/releases/download/v4.1.0-rc4/cmake-4.1.0-rc4.tar.gz
-          #wget https://cmake.org/files/v3.4/cmake-3.4.3.tar.gz
-          #tar -xvf cmake-3.4.3.tar.gz -C $HOME/downloads/
-          #cd $HOME/downloads/cmake-3.4.3/
-          #./bootstrap
-          #make -j8
-          #sudo make install
-
-          #sed -ne '/ENABLE_LANGUAGES/s/c,c++/c,c++,fortran/g' $HOME/Android/Sdk/ndk/21.4.7075529/toolchain/lib/gcc/build-gcc.sh
           
       - name: Build Android Package
         id: build_package
@@ -245,7 +211,7 @@ jobs:
           ##sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 60 --slave /usr/bin/g++ g++ /usr/bin/g++-11
           ##cmake -S . -B build
           source .venv/bin/activate  # Activate virtual environment
-          p4a create --requirements=$(paste -s -d, pipgrip.lock) --arch arm64-v8a --arch armeabi-v7a --arch x86_64 --sdk-dir $ANDROID_SDK_ROOT --ndk-dir $ANDROID_NDK_HOME --dist-name mydist
+          p4a create --requirements=Cython==3.0.0 --arch arm64-v8a --arch armeabi-v7a --arch x86_64 --sdk-dir $ANDROID_SDK_ROOT --ndk-dir $ANDROID_NDK_HOME --dist-name mydist
         
 
       - name: Zip mydist folder
