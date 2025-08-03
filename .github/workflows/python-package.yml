@@ -77,7 +77,7 @@ jobs:
           
           echo "ANDROID_SDK_HOME=${{env.ANDROID_HOME}}/android-sdk"  >> $GITHUB_ENV
           echo "ANDROID_SDK_TOOLS_ARCHIVE=commandlinetools-linux-${{env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip"  >> $GITHUB_ENV
-          echo "ANDROID_SDK_TOOLS_DL_URL=https://dl.google.com/android/repository/${{ANDROID_SDK_TOOLS_ARCHIVE}}"  >> $GITHUB_ENV
+          echo "ANDROID_SDK_TOOLS_DL_URL=https://dl.google.com/android/repository/${{$ANDROID_SDK_TOOLS_ARCHIVE}}"  >> $GITHUB_ENV
           
           echo "ANDROID_NDK_HOME=${{env.ANDROID_HOME}}/android-ndk"  >> $GITHUB_ENV
           echo "ANDROID_NDK_FOLDER=${{env.ANDROID_HOME}}/android-ndk-r${{env.ANDROID_NDK_VERSION}}"  >> $GITHUB_ENV
