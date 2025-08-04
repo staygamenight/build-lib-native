@@ -51,6 +51,7 @@ jobs:
             libtool pkg-config m4 libtool-bin libltdl-dev
           sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
           sudo apt-get install gcc-multilib
+          sudo apt-get install portaudio19-dev
 
       - name: Install Python Dependencies
         run: |
@@ -61,7 +62,7 @@ jobs:
           #pip install git+https://github.com/T-Dynamos/python-for-android.git
           pip install git+https://github.com/kivy/python-for-android.git
           pip install --upgrade pipgrip
-          pip install --upgrade Cython
+          pip install --upgrade Cython pyaudio
           #python3 -m ensurepip --upgrade
           
       - name: Extract dependencies with pipgrip
