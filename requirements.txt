@@ -1,4 +1,4 @@
-scipy
+scipy==1.11.4
 Cython==0.29.36
 setuptools==59.8.0
 numpy==1.22.4
