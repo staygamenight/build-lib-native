@@ -1,1 +1,2 @@
 scipy
+Cython==0.29.36
