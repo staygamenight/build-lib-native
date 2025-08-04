@@ -67,7 +67,7 @@ jobs:
           source .venv/bin/activate
           pipgrip $(cat requirements.txt) --lock
           pip install setuptools==59.8.0
-          pip install Cython==3.0.0
+          pip install Cython==0.29.36
           pip install numpy==1.22.4
  
       - name: Set variables
