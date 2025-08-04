@@ -8,12 +8,12 @@ on:
 
 env:
   ## Those android NDK/SDK variables can be override when running the file
-  ANDROID_NDK_VERSION: 27c #28c
+  ANDROID_NDK_VERSION: 28c #27c
   ANDROID_NDK_VERSION_LEGACY: 21e
   ANDROID_SDK_TOOLS_VERSION: 6514223
   ANDROID_SDK_BUILD_TOOLS_VERSION: 29.0.3
   ANDROID_HOME: /home/runner/Android
-  ANDROID_API_LEVEL: 27 #36
+  ANDROID_API_LEVEL: 36 #27
 
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
       - name: Set up Python 3
         uses: actions/setup-python@v2
         with:
-          python-version: '3.11'
+          python-version: '3.x'
 
       - name: Upload requirements.txt
         run: |
@@ -57,18 +57,19 @@ jobs:
           source .venv/bin/activate
           pip install --upgrade pip
           pip install maturin
-          pip install git+https://github.com/T-Dynamos/python-for-android.git
-          #pip install git+https://github.com/kivy/python-for-android.git
+          #pip install git+https://github.com/T-Dynamos/python-for-android.git
+          pip install git+https://github.com/kivy/python-for-android.git
           pip install --upgrade pipgrip
+          pip install --upgrade Cython
           #python3 -m ensurepip --upgrade
           
       - name: Extract dependencies with pipgrip
         run: |
           source .venv/bin/activate
           pipgrip $(cat requirements.txt) --lock
-          pip install setuptools==59.8.0
-          pip install Cython==0.29.36
-          pip install numpy==1.22.4
+          #pip install setuptools==59.8.0
+          #pip install Cython==0.29.36
+          #pip install numpy==1.22.4
  
       - name: Set variables
         id: variable
