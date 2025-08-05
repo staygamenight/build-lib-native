@@ -97,14 +97,17 @@ jobs:
             libtool pkg-config m4 libtool-bin libltdl-dev
           sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
           sudo apt-get install gcc-multilib
+
+          #sudo dpkg --remove libasound2-dev:amd64
+          wget http://launchpadlibrarian.net/716826131/libasound2-dev_1.2.11-1_arm64.deb
+          sudo dpkg -i libasound2-dev_1.2.11-1_arm64.deb
+          sudo apt install -f
+          
           sudo apt-get install portaudio19-dev
           #sudo apt-get install libportaudio2
           #sudo apt-get install libasound2-dev
 
-          sudo dpkg --remove libasound2-dev:amd64
-          wget http://launchpadlibrarian.net/716826131/libasound2-dev_1.2.11-1_arm64.deb
-          sudo dpkg -i libasound2-dev_1.2.11-1_arm64.deb
-          sudo apt install -f
+
 
       - name: Install Python Dependencies
         run: |
