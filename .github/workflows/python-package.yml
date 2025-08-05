@@ -54,14 +54,14 @@ jobs:
           sudo dpkg --add-architecture armhf
           sudo dpkg --add-architecture arm64
           sudo touch /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal main restricted
-          deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates main restricted
-          deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal universe
-          deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates universe
-          deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal multiverse
-          deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates multiverse
-          deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-backports main restricted universe multiverse
-          deb [arch=amd64] http://us.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse
+          echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal main restricted' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates main restricted' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal universe' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates universe' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-backports main restricted universe multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo 'deb [arch=amd64] http://us.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           sudo apt update
 
           sudo apt-get install gcc-multilib
