@@ -98,6 +98,10 @@ jobs:
           sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
           sudo apt-get install gcc-multilib
 
+          wget http://launchpadlibrarian.net/716826140/libasound2t64_1.2.11-1_arm64.deb
+          sudo dpkg -i libasound2t64_1.2.11-1_arm64.deb
+          sudo apt install -f
+
           #sudo dpkg --remove libasound2-dev:amd64
           wget http://launchpadlibrarian.net/716826131/libasound2-dev_1.2.11-1_arm64.deb
           sudo dpkg -i libasound2-dev_1.2.11-1_arm64.deb
