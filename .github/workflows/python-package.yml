@@ -108,7 +108,7 @@ jobs:
           wget http://launchpadlibrarian.net/799265959/libasound2-dev_1.2.11-1ubuntu0.1_arm64.deb
           sudo dpkg -i libasound2-dev_1.2.11-1ubuntu0.1_arm64.deb
 
-          sudo apt-get remove libdb5.3t64:amd64
+          #sudo apt-get remove libdb5.3t64:amd64
           #wget http://ftp.us.debian.org/debian/pool/main/d/db5.3/libdb5.3t64_5.3.28+dfsg2-9_amd64.deb
           #sudo dpkg -i libdb5.3t64_5.3.28+dfsg2-9_amd64.deb
           wget http://ftp.us.debian.org/debian/pool/main/d/db5.3/libdb5.3t64_5.3.28+dfsg2-9_arm64.deb
