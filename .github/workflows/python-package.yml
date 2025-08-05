@@ -108,6 +108,12 @@ jobs:
           wget http://launchpadlibrarian.net/799265959/libasound2-dev_1.2.11-1ubuntu0.1_arm64.deb
           sudo dpkg -i libasound2-dev_1.2.11-1ubuntu0.1_arm64.deb
 
+          wget http://launchpadlibrarian.net/592573936/libdb5.3_5.3.28+dfsg1-0.8ubuntu3_arm64.deb
+          sudo dpkg -i libdb5.3_5.3.28+dfsg1-0.8ubuntu3_arm64.deb
+          wget http://launchpadlibrarian.net/592808635/libsamplerate0_0.2.2-1build1_arm64.deb
+          sudo dpkg -i libsamplerate0_0.2.2-1build1_arm64.deb
+          wget http://launchpadlibrarian.net/665999518/libstdc++6_12.3.0-1ubuntu1~22.04_arm64.deb
+          sudo dpkg -i libstdc++6_12.3.0-1ubuntu1~22.04_arm64.deb
           wget http://launchpadlibrarian.net/581846528/libjack-jackd2-0_1.9.20~dfsg-1_arm64.deb
           sudo dpkg -i libjack-jackd2-0_1.9.20~dfsg-1_arm64.deb
           wget http://launchpadlibrarian.net/724564385/libdb5.3t64_5.3.28+dfsg2-7_arm64.deb
