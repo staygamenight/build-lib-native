@@ -53,7 +53,7 @@ jobs:
 
           sudo dpkg --add-architecture armhf
           sudo dpkg --add-architecture arm64
-          sudo touch /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          #sudo touch /etc/apt/sources.list.d/arm-cross-compile-sources.list
           #echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal main restricted' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           #echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates main restricted' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           #echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal universe' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
@@ -61,18 +61,21 @@ jobs:
           #echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           #echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           #echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-backports main restricted universe multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          #echo 'deb [arch=armhf,arm64] http://us.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           
-          echo "deb [arch=armhf] http://ports.ubuntu.com/ubuntu-ports focal main restricted" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          echo "deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports focal-updates main restricted" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ubuntu-ports focal main restricted" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ubuntu-ports focal-updates main restricted" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ubuntu-ports focal universe" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ubuntu-ports focal-updates universe" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ubuntu-ports focal multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ubuntu-ports focal-updates multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          echo "deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports focal-backports main restricted universe multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          echo "deb [arch=armhf] http://ports.ubuntu.com/ubuntu-ports focal-security main restricted" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ubuntu-ports focal-backports main restricted universe multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ubuntu-ports focal-security main restricted" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ubuntu-ports focal-security universe" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ubuntu-ports focal-security multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo 'deb [arch=arm64] http://us.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          sudo apt-get clean
+          sudo apt-get autoclean
+          sudo rm -rf /var/lib/apt/lists/
           sudo apt update
 
           sudo apt-get install gcc-multilib
