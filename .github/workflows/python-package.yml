@@ -114,6 +114,8 @@ jobs:
           sudo dpkg -i libportaudiocpp0_19.6.0-1.2build3_arm64.deb
           wget http://launchpadlibrarian.net/664674521/libjack-jackd2-dev_1.9.21~dfsg-3_arm64.deb
           sudo dpkg -i libjack-jackd2-dev_1.9.21~dfsg-3_arm64.deb
+          wget http://launchpadlibrarian.net/765563524/libjack-jackd2-0_1.9.22~dfsg-4_arm64.deb
+          sudo dpkg -i libjack-jackd2-dev_1.9.21~dfsg-3_arm64.deb
           wget https://launchpad.net/ubuntu/+source/portaudio19/19.6.0-1.2build3/+build/28030472/+files/portaudio19-dev_19.6.0-1.2build3_arm64.deb
           sudo dpkg -i portaudio19-dev_19.6.0-1.2build3_arm64.deb
           
