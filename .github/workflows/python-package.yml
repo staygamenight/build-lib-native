@@ -101,6 +101,7 @@ jobs:
           #sudo apt-get install libportaudio2
           #sudo apt-get install libasound2-dev
 
+          sudo dpkg --remove libasound2-dev:amd64
           wget http://launchpadlibrarian.net/716826131/libasound2-dev_1.2.11-1_arm64.deb
           sudo dpkg -i libasound2-dev_1.2.11-1_arm64.deb
           sudo apt install -f
