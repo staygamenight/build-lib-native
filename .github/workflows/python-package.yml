@@ -100,13 +100,13 @@ jobs:
           sudo apt-get install gcc-multilib
 
           #sudo dpkg --remove libasound2t64:amd64
-          wget http://launchpadlibrarian.net/716826140/libasound2t64_1.2.11-1_arm64.deb
-          sudo dpkg -i libasound2t64_1.2.11-1_arm64.deb
+          wget http://launchpadlibrarian.net/799265966/libasound2t64_1.2.11-1ubuntu0.1_arm64.deb
+          sudo dpkg -i libasound2t64_1.2.11-1ubuntu0.1_arm64.deb
           sudo apt install -f
 
           #sudo dpkg --remove libasound2-dev:amd64
-          wget http://launchpadlibrarian.net/716826131/libasound2-dev_1.2.11-1_arm64.deb
-          sudo dpkg -i libasound2-dev_1.2.11-1_arm64.deb
+          wget http://launchpadlibrarian.net/799265103/libasound2-dev_1.2.11-1ubuntu0.1_amd64.deb
+          sudo dpkg -i libasound2-dev_1.2.11-1ubuntu0.1_amd64.deb
           sudo apt install -f
           
           sudo apt-get install portaudio19-dev
