@@ -99,6 +99,10 @@ jobs:
           #sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
           sudo apt-get install gcc-multilib
 
+          wget http://launchpadlibrarian.net/748335974/gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
+          sudo dpkg -i gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
+          sudo apt install -f
+          
           wget http://launchpadlibrarian.net/748336084/libgcc-s1_14.2.0-4ubuntu2~24.04_arm64.deb
           sudo dpkg -i libgcc-s1_14.2.0-4ubuntu2~24.04_arm64.deb
           sudo apt install -f
