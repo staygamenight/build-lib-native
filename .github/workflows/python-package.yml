@@ -75,16 +75,16 @@ jobs:
           #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           #echo 'deb [arch=arm64] http://us.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
 
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal main restricted" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates main restricted" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal universe" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates universe" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal multiverse" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates multiverse" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-backports main restricted universe multiverse" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security main restricted" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security universe" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security multiverse" | sudo tee /etc/apt/sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ noble main restricted" | sudo tee /etc/apt/sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ noble-updates main restricted" | sudo tee /etc/apt/sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ noble universe" | sudo tee /etc/apt/sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ noble-updates universe" | sudo tee /etc/apt/sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ noble multiverse" | sudo tee /etc/apt/sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ noble-updates multiverse" | sudo tee /etc/apt/sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ noble-backports main restricted universe multiverse" | sudo tee /etc/apt/sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ noble-security main restricted" | sudo tee /etc/apt/sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ noble-security universe" | sudo tee /etc/apt/sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ noble-security multiverse" | sudo tee /etc/apt/sources.list
           echo 'deb [arch=arm64] http://us.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse' | sudo tee /etc/apt/sources.list
 
           sudo dpkg --add-architecture armhf
@@ -93,10 +93,9 @@ jobs:
           
           #sudo apt-get update
 
-          #sudo apt-get install -y gettext libiconv-hook-dev autoconf automake \
+          sudo apt-get install -y gettext libiconv-hook-dev autoconf automake \
             libtool pkg-config m4 libtool-bin libltdl-dev
           
-          sudo apt-get libtool libtool pkg-config m4 libtool-bin libltdl-dev gettext libiconv-hook-dev
           #sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
           sudo apt-get install gcc-multilib
 
