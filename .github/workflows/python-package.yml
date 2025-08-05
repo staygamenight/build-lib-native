@@ -51,7 +51,10 @@ jobs:
           sudo rm -rf /var/lib/apt/lists/
           
           #sudo apt update
-          sudo apt-get update
+          #sudo apt-get update
+
+          sudo dpkg --add-architecture armhf
+          sudo dpkg --add-architecture arm64
 
           #sudo touch /etc/apt/sources.list.d/arm-cross-compile-sources.list
           sudo touch /etc/apt/sources.list
@@ -86,9 +89,6 @@ jobs:
           echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security universe" | sudo tee /etc/apt/sources.list
           echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security multiverse" | sudo tee /etc/apt/sources.list
           echo 'deb [arch=arm64] http://us.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse' | sudo tee /etc/apt/sources.list
-
-          sudo dpkg --add-architecture armhf
-          sudo dpkg --add-architecture arm64
 
           sudo apt-get update
 
