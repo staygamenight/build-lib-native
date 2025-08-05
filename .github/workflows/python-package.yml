@@ -89,6 +89,7 @@ jobs:
 
           sudo dpkg --add-architecture armhf
           sudo dpkg --add-architecture arm64
+          sudo dpkg --print-foreign-architectures
           
           #sudo apt-get update
 
@@ -96,9 +97,9 @@ jobs:
             libtool pkg-config m4 libtool-bin libltdl-dev
           sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
           sudo apt-get install gcc-multilib
-          sudo apt-get install portaudio19-dev
+          sudo apt-get install portaudio19-dev:arm64
           sudo apt-get install libportaudio2
-          sudo apt-get install libasound2-dev:arm64
+          sudo apt-get install libasound2-dev
 
       - name: Install Python Dependencies
         run: |
