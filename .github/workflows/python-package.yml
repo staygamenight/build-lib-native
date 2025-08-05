@@ -51,7 +51,7 @@ jobs:
           sudo rm -rf /var/lib/apt/lists/
           
           #sudo apt update
-          #sudo apt-get update
+          sudo apt-get update
 
           #sudo touch /etc/apt/sources.list.d/arm-cross-compile-sources.list
           sudo touch /etc/apt/sources.list
