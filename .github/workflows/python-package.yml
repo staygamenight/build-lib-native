@@ -108,6 +108,8 @@ jobs:
           wget http://launchpadlibrarian.net/799265959/libasound2-dev_1.2.11-1ubuntu0.1_arm64.deb
           sudo dpkg -i libasound2-dev_1.2.11-1ubuntu0.1_arm64.deb
 
+          wget http://launchpadlibrarian.net/581846528/libjack-jackd2-0_1.9.20~dfsg-1_arm64.deb
+          sudo dpkg -i libjack-jackd2-0_1.9.20~dfsg-1_arm64.deb
           wget http://launchpadlibrarian.net/724564385/libdb5.3t64_5.3.28+dfsg2-7_arm64.deb
           sudo dpkg -i libdb5.3t64_5.3.28+dfsg2-7_arm64.deb
           wget http://launchpadlibrarian.net/723783896/libopus0_1.4-1build1_arm64.deb
@@ -118,8 +120,8 @@ jobs:
           sudo dpkg -i libstdc++6_14.2.0-4ubuntu2~24.04_arm64.deb
           wget http://launchpadlibrarian.net/765563524/libjack-jackd2-0_1.9.22~dfsg-4_arm64.deb
           sudo dpkg -i libjack-jackd2-0_1.9.22~dfsg-4_arm64.deb
-          wget http://launchpadlibrarian.net/664674521/libjack-jackd2-dev_1.9.21~dfsg-3_arm64.deb
-          sudo dpkg -i libjack-jackd2-dev_1.9.21~dfsg-3_arm64.deb
+          wget http://launchpadlibrarian.net/581846317/libjack-jackd2-dev_1.9.20~dfsg-1_amd64.deb
+          sudo dpkg -i libjack-jackd2-dev_1.9.20~dfsg-1_amd64.deb
           wget http://launchpadlibrarian.net/723553337/libportaudiocpp0_19.6.0-1.2build3_arm64.deb
           sudo dpkg -i libportaudiocpp0_19.6.0-1.2build3_arm64.deb
           wget http://launchpadlibrarian.net/723553336/libportaudio2_19.6.0-1.2build3_arm64.deb
