@@ -49,17 +49,15 @@ jobs:
           sudo apt-get clean
           sudo apt-get autoclean
           sudo rm -rf /var/lib/apt/lists/
-          sudo apt update
+          #sudo apt update
           
           sudo apt-get update
           sudo apt-get install -y gettext libiconv-hook-dev autoconf automake \
             libtool pkg-config m4 libtool-bin libltdl-dev
           sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
 
-          sudo dpkg --add-architecture armhf
-          sudo dpkg --add-architecture arm64
-          #sudo touch /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          sudo touch /etc/apt/sources.list
+          sudo touch /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          #sudo touch /etc/apt/sources.list
           #echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal main restricted' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           #echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates main restricted' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           #echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal universe' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
@@ -68,29 +66,32 @@ jobs:
           #echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           #echo 'deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-backports main restricted universe multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
           
-          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal main restricted" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates main restricted" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal universe" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates universe" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-backports main restricted universe multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security main restricted" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security universe" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
-          #echo 'deb [arch=arm64] http://us.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal main restricted" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates main restricted" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal universe" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates universe" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-backports main restricted universe multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security main restricted" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security universe" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security multiverse" | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
+          echo 'deb [arch=arm64] http://us.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse' | sudo tee /etc/apt/sources.list.d/arm-cross-compile-sources.list
 
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal main restricted" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates main restricted" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal universe" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates universe" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal multiverse" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates multiverse" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-backports main restricted universe multiverse" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security main restricted" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security universe" | sudo tee /etc/apt/sources.list
-          echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security multiverse" | sudo tee /etc/apt/sources.list
-          echo 'deb [arch=arm64] http://us.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse' | sudo tee /etc/apt/sources.list
+          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal main restricted" | sudo tee /etc/apt/sources.list
+          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates main restricted" | sudo tee /etc/apt/sources.list
+          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal universe" | sudo tee /etc/apt/sources.list
+          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates universe" | sudo tee /etc/apt/sources.list
+          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal multiverse" | sudo tee /etc/apt/sources.list
+          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-updates multiverse" | sudo tee /etc/apt/sources.list
+          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-backports main restricted universe multiverse" | sudo tee /etc/apt/sources.list
+          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security main restricted" | sudo tee /etc/apt/sources.list
+          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security universe" | sudo tee /etc/apt/sources.list
+          #echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ focal-security multiverse" | sudo tee /etc/apt/sources.list
+          #echo 'deb [arch=arm64] http://us.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse' | sudo tee /etc/apt/sources.list
+
+          sudo dpkg --add-architecture armhf
+          sudo dpkg --add-architecture arm64
 
           sudo apt-get install gcc-multilib
           sudo apt-get install portaudio19-dev
