@@ -85,7 +85,7 @@ jobs:
           echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ noble-security main restricted" | sudo tee /etc/apt/sources.list
           echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ noble-security universe" | sudo tee /etc/apt/sources.list
           echo "deb [arch=armhf,arm64] http://ports.ubuntu.com/ noble-security multiverse" | sudo tee /etc/apt/sources.list
-          echo 'deb [arch=arm64] http://us.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse' | sudo tee /etc/apt/sources.list
+          echo 'deb [arch=arm64] http://us.archive.ubuntu.com/ubuntu/ noble main restricted universe multiverse' | sudo tee /etc/apt/sources.list
 
           sudo dpkg --add-architecture armhf
           sudo dpkg --add-architecture arm64
@@ -96,11 +96,11 @@ jobs:
           #sudo apt-get install -y gettext libiconv-hook-dev autoconf automake \
             libtool pkg-config m4 libtool-bin libltdl-dev
           
-          sudo apt-get install -y libltdl-dev
+          sudo apt-get install -y libtool-bin
           #sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
           sudo apt-get install gcc-multilib
 
-          sudo dpkg --remove libasound2t64:amd64
+          #sudo dpkg --remove libasound2t64:amd64
           wget http://launchpadlibrarian.net/716826140/libasound2t64_1.2.11-1_arm64.deb
           sudo dpkg -i libasound2t64_1.2.11-1_arm64.deb
           sudo apt install -f
