@@ -286,12 +286,12 @@ jobs:
           
           # updates Android SDK, install Android API, Build Tools and accept licenses
           # update_android_sdk:
-          	touch /home/runner/Android/repositories.cfg
-          	yes | $ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME --licenses > /dev/null
-          	$ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME "build-tools;${{env.ANDROID_SDK_BUILD_TOOLS_VERSION}}" > /dev/null
-          	$ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME "platforms;android-${{env.ANDROID_API_LEVEL}}" > /dev/null
-          	# Set avdmanager permissions executable
-          	chmod +x $ANDROID_SDK_HOME/tools/bin/avdmanager
+          	#touch /home/runner/Android/repositories.cfg
+          	#yes | $ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME --licenses > /dev/null
+          	#$ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME "build-tools;${{env.ANDROID_SDK_BUILD_TOOLS_VERSION}}" > /dev/null
+          	#$ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME "platforms;android-${{env.ANDROID_API_LEVEL}}" > /dev/null
+          	## Set avdmanager permissions executable
+          	#chmod +x $ANDROID_SDK_HOME/tools/bin/avdmanager
           
       - name: Remove version
         run: |
