@@ -95,9 +95,9 @@ jobs:
           
           #sudo apt-get update
 
-          #sudo apt-get install -y gettext libiconv-hook-dev autoconf automake \
+          sudo apt-get install -y gettext libiconv-hook-dev autoconf automake \
             libtool pkg-config m4 libtool-bin libltdl-dev
-          #sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
+          sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
           #sudo apt-get install -y gcc-arm-linux-gnueabi g++-arm-linux-gnueabi gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf
           #sudo apt-get install gcc-multilib
           #sudo apt-get install libc6-dev build-essential
