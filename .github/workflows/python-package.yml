@@ -93,7 +93,7 @@ jobs:
           sudo dpkg --add-architecture arm64
           sudo dpkg --print-foreign-architectures
           
-          #sudo apt-get update
+          sudo apt-get update
 
           sudo apt-get install -y libiconv-hook-dev autoconf automake \
             libtool pkg-config m4 libtool-bin libltdl-dev gettext 
@@ -101,6 +101,9 @@ jobs:
           #sudo apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
           #sudo apt-get install gcc-multilib
           sudo apt-get install libc6-dev build-essential
+
+          echo "CC=aarch64-linux-gnu-gcc"  >> $GITHUB_ENV
+          echo "CXX=aarch64-linux-gnu-g++"  >> $GITHUB_ENV
 
           #wget http://launchpadlibrarian.net/748335974/gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
           #sudo dpkg -i gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
