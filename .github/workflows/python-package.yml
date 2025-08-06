@@ -13,13 +13,11 @@ env:
   ANDROID_SDK_TOOLS_VERSION: 6514223
   ANDROID_SDK_BUILD_TOOLS_VERSION: 29.0.3
   ANDROID_HOME: /home/runner/Android
-  ANDROID_API_LEVEL: 33 #36 #27
+  ANDROID_API_LEVEL: 27 #33 #36
 
 jobs:
   build:
-    runs-on: ubuntu-22.04-arm #ubuntu-latest
-  
-      ## per OS dictionary-like    
+    runs-on: ubuntu-22.04-arm #ubuntu-latest 
  
     steps:
       - name: Checkout code
@@ -35,7 +33,7 @@ jobs:
       - name: Set up Python 3
         uses: actions/setup-python@v2
         with:
-          python-version: '3.10'
+          python-version: '3.9'
 
       - name: Upload requirements.txt
         run: |
