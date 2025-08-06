@@ -8,16 +8,16 @@ on:
 
 env:
   ## Those android NDK/SDK variables can be override when running the file
-  ANDROID_NDK_VERSION: 25b #27c #28c
+  ANDROID_NDK_VERSION: 27c #25b #28c
   ANDROID_NDK_VERSION_LEGACY: 21e
   ANDROID_SDK_TOOLS_VERSION: 6514223
   ANDROID_SDK_BUILD_TOOLS_VERSION: 29.0.3
   ANDROID_HOME: /home/runner/Android
-  ANDROID_API_LEVEL: 27 #33 #36
+  ANDROID_API_LEVEL: 33 #27 #36
 
 jobs:
   build:
-    runs-on: ubuntu-22.04-arm #ubuntu-latest 
+    runs-on: ubuntu-24.04-arm #ubuntu-latest 
  
     steps:
       - name: Checkout code
@@ -33,7 +33,7 @@ jobs:
       - name: Set up Python 3
         uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: '3.11'
 
       - name: Upload requirements.txt
         run: |
@@ -284,7 +284,7 @@ jobs:
         id: build_package
         run: |
           #sudo apt install libltdl-dev
-          #sudo apt-get install gcc-11 g++-11
+          sudo apt-get install gcc-11 g++-11
           #rm -rf build
           #export CXX=/usr/bin/g++-11
           ##sudo apt install update-alternatives
