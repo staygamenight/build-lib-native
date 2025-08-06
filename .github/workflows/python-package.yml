@@ -117,8 +117,8 @@ jobs:
           #sudo dpkg -i libdb5.3t64_5.3.28+dfsg2-9_amd64.deb
           #wget http://ftp.us.debian.org/debian/pool/main/d/db5.3/libdb5.3t64_5.3.28+dfsg2-9_arm64.deb
           #sudo dpkg -i libdb5.3t64_5.3.28+dfsg2-9_arm64.deb #libdb5.3t64 and libdb5.3t break
-          wget http://launchpadlibrarian.net/724564385/libdb5.3t64_5.3.28+dfsg2-7_arm64.deb
-          sudo dpkg -i libdb5.3t64_5.3.28+dfsg2-7_arm64.deb
+          #wget http://launchpadlibrarian.net/724564385/libdb5.3t64_5.3.28+dfsg2-7_arm64.deb
+          #sudo dpkg -i libdb5.3t64_5.3.28+dfsg2-7_arm64.deb
           
           wget http://launchpadlibrarian.net/592573936/libdb5.3_5.3.28+dfsg1-0.8ubuntu3_arm64.deb
           sudo dpkg -i libdb5.3_5.3.28+dfsg1-0.8ubuntu3_arm64.deb
