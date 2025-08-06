@@ -29,7 +29,7 @@ jobs:
       - name: Set up JDK 11
         uses: actions/setup-java@v1
         with:
-          java-version: '11'
+          java-version: '24'
 
       - name: Set up Python 3
         uses: actions/setup-python@v2
@@ -278,10 +278,10 @@ jobs:
           	&& mkdir  $ANDROID_NDK_HOME_LEGACY/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/ \
           	&& tar -xf $ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64 -C $ANDROID_NDK_HOME_LEGACY/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/ --strip-components 1 \
           	&& rm -f $ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64 \
-          	&& rm -rf $ANDROID_NDK_HOME_LEGACY/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/ \
-          	&& mkdir  $ANDROID_NDK_HOME_LEGACY/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/ \
-          	&& tar -xf $ANDROID_NDK_GFORTRAN_ARCHIVE_ARM -C $ANDROID_NDK_HOME_LEGACY/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/ --strip-components 1 \
-          	&& rm -f $ANDROID_NDK_GFORTRAN_ARCHIVE_ARM
+          	#&& rm -rf $ANDROID_NDK_HOME_LEGACY/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/ \
+          	#&& mkdir  $ANDROID_NDK_HOME_LEGACY/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/ \
+          	#&& tar -xf $ANDROID_NDK_GFORTRAN_ARCHIVE_ARM -C $ANDROID_NDK_HOME_LEGACY/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/ --strip-components 1 \
+          	#&& rm -f $ANDROID_NDK_GFORTRAN_ARCHIVE_ARM
           
           # updates Android SDK, install Android API, Build Tools and accept licenses
           # update_android_sdk:
