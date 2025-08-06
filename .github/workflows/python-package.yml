@@ -104,11 +104,11 @@ jobs:
           sudo dpkg -i gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
           wget http://launchpadlibrarian.net/748336084/libgcc-s1_14.2.0-4ubuntu2~24.04_arm64.deb
           wget http://launchpadlibrarian.net/804169350/libc6_2.39-0ubuntu8.5_arm64.deb
-          sudo dpkg -i libc6_2.39-0ubuntu8.5_arm64.deb libgcc-s1_14.2.0-4ubuntu2~24.04_arm64.deb
+          sudo dpkg -i libc6_2.39-0ubuntu8.5_arm64.deb libgcc-s1_14.2.0-4ubuntu2~24.04_arm64.deb #circular dependency
           wget http://launchpadlibrarian.net/799265101/libasound2-data_1.2.11-1ubuntu0.1_all.deb
-          #sudo dpkg -i -B libasound2-data_1.2.11-1ubuntu0.1_all.deb
+          #sudo dpkg -i libasound2-data_1.2.11-1ubuntu0.1_all.deb #libasound2t64:arm64 (1.2.11-1ubuntu0.1) over (1.2.11-1build2), dependency problems prevent configuration of libasound2t64:arm64, libasound2-data would break libasound2t64:arm64
           wget http://launchpadlibrarian.net/799265966/libasound2t64_1.2.11-1ubuntu0.1_arm64.deb
-          sudo dpkg -i libasound2-data_1.2.11-1ubuntu0.1_all.deb libasound2t64_1.2.11-1ubuntu0.1_arm64.deb
+          sudo dpkg -i -B libasound2-data_1.2.11-1ubuntu0.1_all.deb libasound2t64_1.2.11-1ubuntu0.1_arm64.deb
           wget http://launchpadlibrarian.net/799265959/libasound2-dev_1.2.11-1ubuntu0.1_arm64.deb
           sudo dpkg -i libasound2-dev_1.2.11-1ubuntu0.1_arm64.deb
 
@@ -116,7 +116,7 @@ jobs:
           #wget http://ftp.us.debian.org/debian/pool/main/d/db5.3/libdb5.3t64_5.3.28+dfsg2-9_amd64.deb
           #sudo dpkg -i libdb5.3t64_5.3.28+dfsg2-9_amd64.deb
           #wget http://ftp.us.debian.org/debian/pool/main/d/db5.3/libdb5.3t64_5.3.28+dfsg2-9_arm64.deb
-          #sudo dpkg -i libdb5.3t64_5.3.28+dfsg2-9_arm64.deb
+          #sudo dpkg -i libdb5.3t64_5.3.28+dfsg2-9_arm64.deb #libdb5.3t64 and libdb5.3t break
           wget http://launchpadlibrarian.net/724564385/libdb5.3t64_5.3.28+dfsg2-7_arm64.deb
           sudo dpkg -i libdb5.3t64_5.3.28+dfsg2-7_arm64.deb
           
