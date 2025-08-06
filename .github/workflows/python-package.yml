@@ -47,7 +47,7 @@ jobs:
           
       - name: Install Dependencies
         run: |
-          RUN set -x && apt-get -t sid install -o APT::Immediate-Configure=false -y --no-install-recommends -o Debug::pkgProblemResolver=true -o Debug::Acquire::http=true                                libapache2-mod-security2=2.9.7-1+b1:
+          set -x && apt-get -t sid install -o APT::Immediate-Configure=false -y --no-install-recommends -o Debug::pkgProblemResolver=true -o Debug::Acquire::http=true                                libapache2-mod-security2=2.9.7-1+b1:
           sudo apt-get clean
           sudo apt-get autoclean
           sudo rm -rf /var/lib/apt/lists/
