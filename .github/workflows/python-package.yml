@@ -14,6 +14,7 @@ env:
   ANDROID_SDK_BUILD_TOOLS_VERSION: 29.0.3
   ANDROID_HOME: /home/runner/Android
   ANDROID_API_LEVEL: 36 #27
+  DEB_BUILD_MAINT_OPTIONS: abi=-time64
 
 jobs:
   build:
