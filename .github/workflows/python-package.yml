@@ -98,6 +98,7 @@ jobs:
           sudo apt-get install -y gettext libiconv-hook-dev autoconf automake \
             libtool pkg-config m4 libtool-bin libltdl-dev
           sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
+          sudo apt-get install -y gcc-arm-linux-gnueabi g++-arm-linux-gnueabi gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf
           #sudo apt-get install gcc-multilib
           #sudo apt-get install libc6-dev build-essential
 
@@ -251,8 +252,6 @@ jobs:
           	https://github.com/mzakharo/android-gfortran/releases/download/r${{env.ANDROID_NDK_VERSION_LEGACY}}/$ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64 --output $ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64
           	curl --location --progress-bar --continue-at - \
           	https://github.com/mzakharo/android-gfortran/releases/download/r${{env.ANDROID_NDK_VERSION_LEGACY}}/$ANDROID_NDK_GFORTRAN_ARCHIVE_ARM  --output $ANDROID_NDK_GFORTRAN_ARCHIVE_ARM
-
-            echo "https://github.com/mzakharo/android-gfortran/releases/download/r${{env.ANDROID_NDK_VERSION_LEGACY}}/$ANDROID_NDK_GFORTRAN_ARCHIVE_ARM  --output $ANDROID_NDK_GFORTRAN_ARCHIVE_ARM"
           
           # Extract android SDK and remove the compressed file
           # extract_android_sdk:
