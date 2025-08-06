@@ -95,12 +95,12 @@ jobs:
           
           #sudo apt-get update
 
-          sudo apt-get install -y gettext libiconv-hook-dev autoconf automake \
-            libtool pkg-config m4 libtool-bin libltdl-dev
+          sudo apt-get install -y libiconv-hook-dev autoconf automake \
+            libtool pkg-config m4 libtool-bin libltdl-dev gettext 
           sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
           #sudo apt-get install -y gcc-arm-linux-gnueabi g++-arm-linux-gnueabi gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf
           #sudo apt-get install gcc-multilib
-          #sudo apt-get install libc6-dev build-essential
+          sudo apt-get install libc6-dev build-essential
 
           #wget http://launchpadlibrarian.net/748335974/gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
           #sudo dpkg -i gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
