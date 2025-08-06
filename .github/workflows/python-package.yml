@@ -72,6 +72,9 @@ jobs:
           #echo "CXX=aarch64-linux-gnu-g++"  >> $GITHUB_ENV
           export CC=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
           export CXX=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++
+
+          sudo apt install patchelf
+          patchelf --set-interpreter /lib64/ld-linux-x86-64.so.2 $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
           
           #wget http://launchpadlibrarian.net/748335974/gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
           #sudo dpkg -i gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
