@@ -68,8 +68,8 @@ jobs:
           #sudo apt-get install gcc-multilib
           sudo apt-get install libc6-dev build-essential
 
-          echo "CC=aarch64-linux-gnu-gcc"  >> $GITHUB_ENV
-          echo "CXX=aarch64-linux-gnu-g++"  >> $GITHUB_ENV
+          #echo "CC=aarch64-linux-gnu-gcc"  >> $GITHUB_ENV
+          #echo "CXX=aarch64-linux-gnu-g++"  >> $GITHUB_ENV
           export CC=aarch64-linux-gnu-gcc
           export CXX=aarch64-linux-gnu-g++
           
