@@ -13,7 +13,7 @@ env:
   ANDROID_SDK_TOOLS_VERSION: 6514223
   ANDROID_SDK_BUILD_TOOLS_VERSION: 29.0.3
   ANDROID_HOME: /home/runner/Android
-  ANDROID_API_LEVEL: 24 #33 #27 #36
+  ANDROID_API_LEVEL: 33 #27 #36
 
 jobs:
   build:
@@ -61,7 +61,7 @@ jobs:
           sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
           #sudo apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
           #sudo apt-get install gcc-multilib
-          sudo apt-get install libc6-dev build-essential
+          sudo apt-get install libc6-dev build-essential libffi-dev
 
           #echo "CC=aarch64-linux-gnu-gcc"  >> $GITHUB_ENV
           #echo "CXX=aarch64-linux-gnu-g++"  >> $GITHUB_ENV
