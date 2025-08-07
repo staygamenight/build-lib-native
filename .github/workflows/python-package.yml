@@ -8,7 +8,7 @@ on:
 
 env:
   ## Those android NDK/SDK variables can be override when running the file
-  ANDROID_NDK_VERSION: 27c #25b #28c
+  ANDROID_NDK_VERSION: 28c #25b #27c
   ANDROID_NDK_VERSION_LEGACY: 21e
   ANDROID_SDK_TOOLS_VERSION: 6514223
   ANDROID_SDK_BUILD_TOOLS_VERSION: 29.0.3
@@ -27,7 +27,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '11'
+          java-version: '17'
           architecture: 'aarch64'
 
       - name: Set up Python 3
@@ -64,7 +64,7 @@ jobs:
           sudo apt-get install libc6-dev build-essential libffi-dev
           #sudo apt install cmake autoconf libtool pkg-config build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libncurses5-dev
           sudo apt install libffi-dev
-          sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev \
+          #sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev \
           libsqlite3-dev curl libncurses-dev xz-utils tk-dev libxml2-dev \
           libxmlsec1-dev libffi-dev liblzma-dev \
           autoconf libtool pkg-config cmake adb
