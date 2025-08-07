@@ -8,7 +8,7 @@ on:
 
 env:
   ## Those android NDK/SDK variables can be override when running the file
-  ANDROID_NDK_VERSION: 28c #25b #27c
+  ANDROID_NDK_VERSION: 27c #25b #28c
   ANDROID_NDK_VERSION_LEGACY: 21e
   ANDROID_SDK_TOOLS_VERSION: 6514223
   ANDROID_SDK_BUILD_TOOLS_VERSION: 29.0.3
