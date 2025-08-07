@@ -65,9 +65,9 @@ jobs:
           #sudo apt install cmake autoconf libtool pkg-config build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libncurses5-dev
           sudo apt install libffi-dev
           #sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev \
-          libsqlite3-dev curl libncurses-dev xz-utils tk-dev libxml2-dev \
-          libxmlsec1-dev libffi-dev liblzma-dev \
-          autoconf libtool pkg-config cmake adb
+          #libsqlite3-dev curl libncurses-dev xz-utils tk-dev libxml2-dev \
+          #libxmlsec1-dev libffi-dev liblzma-dev \
+          #autoconf libtool pkg-config cmake adb
   
 
           #echo "CC=aarch64-linux-gnu-gcc"  >> $GITHUB_ENV
