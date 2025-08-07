@@ -8,7 +8,7 @@ on:
 
 env:
   ## Those android NDK/SDK variables can be override when running the file
-  ANDROID_NDK_VERSION: 27c #25b #28c
+  ANDROID_NDK_VERSION: 28c #25b #27c
   ANDROID_NDK_VERSION_LEGACY: 21e
   ANDROID_SDK_TOOLS_VERSION: 6514223
   ANDROID_SDK_BUILD_TOOLS_VERSION: 29.0.3
@@ -294,9 +294,9 @@ jobs:
           ##sudo apt install update-alternatives
           ##sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 60 --slave /usr/bin/g++ g++ /usr/bin/g++-11
           ##cmake -S . -B build
-          #sudo apt install patchelf
-          #patchelf --set-interpreter /lib64/ld-linux-x86-64.so.2 $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
-          sudo apt-get install autoconf libtool --yes
+          sudo apt install patchelf
+          patchelf --set-interpreter /lib64/ld-linux-x86-64.so.2 $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
+          
           echo "CC=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang"  >> $GITHUB_ENV
           echo "CXX=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"  >> $GITHUB_ENV
           export CC=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
