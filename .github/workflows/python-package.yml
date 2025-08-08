@@ -17,7 +17,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest #ubuntu-24.04-arm
+    runs-on: ubuntu-24.04-arm #ubuntu-latest
  
     steps:
       - name: Checkout code
@@ -68,8 +68,8 @@ jobs:
           #libsqlite3-dev curl libncurses-dev xz-utils tk-dev libxml2-dev \
           #libxmlsec1-dev libffi-dev liblzma-dev \
           #autoconf libtool pkg-config cmake adb
-  
 
+  
           #echo "CC=aarch64-linux-gnu-gcc"  >> $GITHUB_ENV
           #echo "CXX=aarch64-linux-gnu-g++"  >> $GITHUB_ENV
           #export CC=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
@@ -128,9 +128,9 @@ jobs:
           #sudo dpkg -i portaudio19-dev_19.6.0-1.2build3_arm64.deb
           
           sudo apt-get -f install
-          sudo apt-get install portaudio19-dev #:arm64
+          sudo apt-get install portaudio19-dev:arm64
           #sudo apt-get install libportaudio2
-          sudo apt-get install libasound2-dev #:arm64
+          sudo apt-get install libasound2-dev:arm64
 
 
       - name: Install Python Dependencies
