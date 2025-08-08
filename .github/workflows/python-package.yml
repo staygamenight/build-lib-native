@@ -128,9 +128,9 @@ jobs:
           #sudo dpkg -i portaudio19-dev_19.6.0-1.2build3_arm64.deb
           
           sudo apt-get -f install
-          sudo apt-get install portaudio19-dev:arm64
+          sudo apt-get install portaudio19-dev #:arm64
           #sudo apt-get install libportaudio2
-          sudo apt-get install libasound2-dev:arm64
+          sudo apt-get install libasound2-dev #:arm64
 
 
       - name: Install Python Dependencies
