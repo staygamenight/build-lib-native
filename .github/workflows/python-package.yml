@@ -276,7 +276,7 @@ jobs:
           	$ANDROID_SDK_HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME/android-sdk "build-tools;35.0.0" > /dev/null
           	$ANDROID_SDK_HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME/android-sdk "platforms;android-35" > /dev/null
           	# Set avdmanager permissions executable
-          	chmod +x $ANDROID_SDK_HOME/tools/bin/avdmanager
+          	chmod +x $ANDROID_SDK_HOME/android-sdk/cmdline-tools/latest/bin/avdmanager
           
       - name: Remove version
         run: |
