@@ -166,9 +166,10 @@ jobs:
           echo ${{env.ANDROID_API_LEVEL}}
           
           echo "ANDROID_SDK_HOME=${{env.ANDROID_HOME}}/android-sdk"  >> $GITHUB_ENV
-          echo "ANDROID_SDK_TOOLS_ARCHIVE=commandlinetools-linux-${{env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip"  >> $GITHUB_ENV
-          echo "ANDROID_SDK_TOOLS_DL_URL=https://dl.google.com/android/repository/commandlinetools-linux-${{env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip"  >> $GITHUB_ENV
-          #echo "ANDROID_SDK_TOOLS_DL_URL=https://github.com/lzhiyong/termux-ndk/releases/download/android-sdk/android-sdk-aarch64.zip"  >> $GITHUB_ENV
+          #echo "ANDROID_SDK_TOOLS_ARCHIVE=commandlinetools-linux-${{env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip"  >> $GITHUB_ENV
+          #echo "ANDROID_SDK_TOOLS_DL_URL=https://dl.google.com/android/repository/commandlinetools-linux-${{env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip"  >> $GITHUB_ENV
+          echo "ANDROID_SDK_TOOLS_ARCHIVE=android-sdk-aarch64.zip"  >> $GITHUB_ENV
+          echo "ANDROID_SDK_TOOLS_DL_URL=https://github.com/lzhiyong/termux-ndk/releases/download/android-sdk/android-sdk-aarch64.zip"  >> $GITHUB_ENV
           
           echo "ANDROID_NDK_HOME=${{env.ANDROID_HOME}}/android-ndk"  >> $GITHUB_ENV
           echo "ANDROID_NDK_FOLDER=${{env.ANDROID_HOME}}/android-ndk-r${{env.ANDROID_NDK_VERSION}}"  >> $GITHUB_ENV
@@ -261,10 +262,19 @@ jobs:
           
           # updates Android SDK, install Android API, Build Tools and accept licenses
           # update_android_sdk:
+          	#touch /home/runner/Android/repositories.cfg
+          	#yes | $ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME --licenses > /dev/null
+          	#$ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME "build-tools;${{env.ANDROID_SDK_BUILD_TOOLS_VERSION}}" > /dev/null
+          	#$ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME "platforms;android-${{env.ANDROID_API_LEVEL}}" > /dev/null
+          	# Set avdmanager permissions executable
+          	#chmod +x $ANDROID_SDK_HOME/tools/bin/avdmanager
+
+          # ARM64 updates Android SDK, install Android API, Build Tools and accept licenses
+          # update_android_sdk:
           	touch /home/runner/Android/repositories.cfg
-          	yes | $ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME --licenses > /dev/null
-          	$ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME "build-tools;${{env.ANDROID_SDK_BUILD_TOOLS_VERSION}}" > /dev/null
-          	$ANDROID_SDK_HOME/tools/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME "platforms;android-${{env.ANDROID_API_LEVEL}}" > /dev/null
+          	yes | $ANDROID_SDK_HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME/android-sdk --licenses > /dev/null
+          	$ANDROID_SDK_HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME/android-sdk "build-tools;35.0.0" > /dev/null
+          	$ANDROID_SDK_HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=$ANDROID_SDK_HOME/android-sdk "platforms;android-35.0.2" > /dev/null
           	# Set avdmanager permissions executable
           	chmod +x $ANDROID_SDK_HOME/tools/bin/avdmanager
           
