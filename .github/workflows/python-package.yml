@@ -173,7 +173,8 @@ jobs:
           
           echo "ANDROID_NDK_HOME=${{env.ANDROID_HOME}}/android-ndk"  >> $GITHUB_ENV
           echo "ANDROID_NDK_FOLDER=${{env.ANDROID_HOME}}/android-ndk-r${{env.ANDROID_NDK_VERSION}}"  >> $GITHUB_ENV
-          echo "ANDROID_NDK_ARCHIVE=android-ndk-r${{env.ANDROID_NDK_VERSION}}-linux.zip"  >> $GITHUB_ENV
+          #echo "ANDROID_NDK_ARCHIVE=android-ndk-r${{env.ANDROID_NDK_VERSION}}-linux.zip"  >> $GITHUB_ENV
+          echo "ANDROID_NDK_ARCHIVE=android-ndk-r27b-aarch64.zip"  >> $GITHUB_ENV
           
           echo "ANDROID_NDK_HOME_LEGACY=${{env.ANDROID_HOME}}/android-ndk-legacy"  >> $GITHUB_ENV
           echo "ANDROID_NDK_FOLDER_LEGACY=${{env.ANDROID_HOME}}/android-ndk-r${{env.ANDROID_NDK_VERSION_LEGACY}}"  >> $GITHUB_ENV
@@ -317,7 +318,7 @@ jobs:
           
           
           source .venv/bin/activate  # Activate virtual environment
-          p4a create --requirements=$(paste -s -d, pipgrip.lock) --arch arm64-v8a --sdk-dir $ANDROID_SDK_HOME/android-sdk/ --ndk-dir $ANDROID_NDK_HOME --dist-name mydist --ndk-api 35
+          p4a create --requirements=$(paste -s -d, pipgrip.lock) --arch arm64-v8a --sdk-dir $ANDROID_SDK_HOME/android-sdk/ --ndk-dir $ANDROID_NDK_HOME/android-ndk/ --dist-name mydist --android-api 35
           #--arch arm64-v8a --arch armeabi-v7a --arch x86_64
 
       - name: Zip mydist folder
