@@ -33,7 +33,7 @@ jobs:
       - name: Set up Python 3
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
       - name: Upload requirements.txt
         run: |
@@ -297,13 +297,13 @@ jobs:
           ##sudo apt install update-alternatives
           ##sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 60 --slave /usr/bin/g++ g++ /usr/bin/g++-11
           ##cmake -S . -B build
-          sudo apt install patchelf
-          patchelf --set-interpreter /lib64/ld-linux-x86-64.so.2 $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
+          #sudo apt install patchelf
+          #patchelf --set-interpreter /lib64/ld-linux-x86-64.so.2 $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
           
-          echo "CC=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang"  >> $GITHUB_ENV
-          echo "CXX=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"  >> $GITHUB_ENV
-          export CC=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
-          export CXX=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++
+          #echo "CC=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang"  >> $GITHUB_ENV
+          #echo "CXX=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"  >> $GITHUB_ENV
+          #export CC=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
+          #export CXX=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++
           
           
           source .venv/bin/activate  # Activate virtual environment
