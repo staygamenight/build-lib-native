@@ -51,29 +51,22 @@ jobs:
           #sudo rm -rf /var/lib/apt/lists/
           #sudo apt-get update
 
-          #sudo dpkg --add-architecture armhf
-          #sudo dpkg --add-architecture arm64
-          #sudo dpkg --print-foreign-architecture
-          #sudo apt-get update
+          sudo dpkg --add-architecture armhf
+          sudo dpkg --add-architecture arm64
+          sudo dpkg --print-foreign-architecture
+          sudo apt-get update
 
           sudo apt-get install -y libiconv-hook-dev autoconf automake \
             libtool pkg-config m4 libtool-bin libltdl-dev gettext 
           sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
           #sudo apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
           #sudo apt-get install gcc-multilib
-          sudo apt-get install libc6-dev build-essential libffi-dev
-          #sudo apt install cmake autoconf libtool pkg-config build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libncurses5-dev
+          sudo apt-get install libc6-dev build-essential
           sudo apt install libffi-dev
           #sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev \
           #libsqlite3-dev curl libncurses-dev xz-utils tk-dev libxml2-dev \
           #libxmlsec1-dev libffi-dev liblzma-dev \
           #autoconf libtool pkg-config cmake adb
-
-  
-          #echo "CC=aarch64-linux-gnu-gcc"  >> $GITHUB_ENV
-          #echo "CXX=aarch64-linux-gnu-g++"  >> $GITHUB_ENV
-          #export CC=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
-          #export CXX=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++
 
           
           #wget http://launchpadlibrarian.net/748335974/gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
@@ -301,15 +294,9 @@ jobs:
       - name: Build Android Package
         id: build_package
         run: |
-          #sudo apt install libltdl-dev
-          #sudo apt-get install gcc-11 g++-11
-          #rm -rf build
-          #export CXX=/usr/bin/g++-11
-          ##sudo apt install update-alternatives
-          ##sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 60 --slave /usr/bin/g++ g++ /usr/bin/g++-11
-          ##cmake -S . -B build
+          
           #sudo apt install patchelf
-          #patchelf --set-interpreter /lib64/ld-linux-x86-64.so.2 $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
+          patchelf --set-interpreter /lib64/ld-linux-x86-64.so.2 $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-14
           
           echo "CC=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android35-clang"  >> $GITHUB_ENV
           echo "CXX=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android35-clang++"  >> $GITHUB_ENV
