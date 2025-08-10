@@ -299,6 +299,8 @@ jobs:
           #patchelf --set-interpreter /lib64/ld-linux-x86-64.so.2 $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-18
           patchelf --set-interpreter /lib64/ld-linux-aarch64.so.1 $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-18
           patchelf --set-interpreter /lib64/ld-linux-aarch64.so.1 $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
+          patchelf --set-interpreter /lib64/ld-linux-aarch64.so.1 $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang
+          patchelf --set-interpreter /lib64/ld-linux-aarch64.so.1 $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android35-clang
           
           #echo "CC=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android35-clang"  >> $GITHUB_ENV
           #echo "CXX=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android35-clang++"  >> $GITHUB_ENV
