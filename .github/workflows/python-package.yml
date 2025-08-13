@@ -66,7 +66,7 @@ jobs:
           #sudo dpkg --print-foreign-architecture
           #sudo apt-get update
 
-          sudo apt-get install -y libiconv-hook-dev autoconf automake \
+          sudo apt-get install -y autoconf automake \
             libtool pkg-config m4 libtool-bin libltdl-dev gettext 
           sudo apt-get install git repo make gcc g++ m4 texinfo bison flex
           #sudo apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
@@ -77,6 +77,7 @@ jobs:
           #libsqlite3-dev curl libncurses-dev xz-utils tk-dev libxml2-dev \
           #libxmlsec1-dev libffi-dev liblzma-dev \
           #autoconf libtool pkg-config cmake adb
+          #libiconv-hook-dev
 
           
           #wget http://launchpadlibrarian.net/748335974/gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
