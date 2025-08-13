@@ -78,7 +78,8 @@ jobs:
           #libxmlsec1-dev libffi-dev liblzma-dev \
           #autoconf libtool pkg-config cmake adb
           #libiconv-hook-dev texinfo
-          
+
+          sudo apt-get install repo
           mkdir -p ~/.bin
           echo 'PATH="${HOME}/.bin:${PATH}"' >> $GITHUB_ENV
           curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
@@ -136,7 +137,7 @@ jobs:
           #wget https://launchpad.net/ubuntu/+source/portaudio19/19.6.0-1.2build3/+build/28030472/+files/portaudio19-dev_19.6.0-1.2build3_arm64.deb
           #sudo dpkg -i portaudio19-dev_19.6.0-1.2build3_arm64.deb
           
-          sudo apt-get -f install
+          #sudo apt-get -f install
           sudo apt-get install portaudio19-dev:arm64
           #sudo apt-get install libportaudio2
           sudo apt-get install libasound2-dev:arm64
