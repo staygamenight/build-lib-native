@@ -78,8 +78,10 @@ jobs:
           #libxmlsec1-dev libffi-dev liblzma-dev \
           #autoconf libtool pkg-config cmake adb
           #libiconv-hook-dev texinfo
-
           
+          sudo apt-get install repo
+          
+
           #wget http://launchpadlibrarian.net/748335974/gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
           #sudo dpkg -i gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
           #wget http://launchpadlibrarian.net/748336084/libgcc-s1_14.2.0-4ubuntu2~24.04_arm64.deb
