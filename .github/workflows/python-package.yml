@@ -64,7 +64,7 @@ jobs:
           #sudo dpkg --add-architecture armhf
           #sudo dpkg --add-architecture arm64
           #sudo dpkg --print-foreign-architecture
-          #sudo apt-get update
+          sudo apt-get update
 
           sudo apt-get install -y autoconf automake \
             libtool pkg-config m4 libtool-bin libltdl-dev gettext 
@@ -137,7 +137,7 @@ jobs:
           #wget https://launchpad.net/ubuntu/+source/portaudio19/19.6.0-1.2build3/+build/28030472/+files/portaudio19-dev_19.6.0-1.2build3_arm64.deb
           #sudo dpkg -i portaudio19-dev_19.6.0-1.2build3_arm64.deb
           
-          #sudo apt-get -f install
+          sudo apt-get -f install
           sudo apt-get install portaudio19-dev:arm64
           #sudo apt-get install libportaudio2
           sudo apt-get install libasound2-dev:arm64
