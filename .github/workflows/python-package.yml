@@ -17,11 +17,11 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04-arm #ubuntu-latest #windows-latest
+    runs-on: windows-latest #ubuntu-24.04-arm #ubuntu-latest 
  
     steps:
       - name: WSL2
-        uses: Vampire/setup-wsl@v6
+        uses: actions/setup-wsl@v6
         with:
           distribution: Ubuntu-24.04
           wsl-version: 2
