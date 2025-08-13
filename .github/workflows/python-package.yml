@@ -61,10 +61,10 @@ jobs:
           #sudo rm -rf /var/lib/apt/lists/
           #sudo apt-get update
 
-          sudo dpkg --add-architecture armhf
-          sudo dpkg --add-architecture arm64
+          #sudo dpkg --add-architecture armhf
+          #sudo dpkg --add-architecture arm64
           #sudo dpkg --print-foreign-architecture
-          sudo apt-get update
+          #sudo apt-get update
 
           sudo apt-get install -y libiconv-hook-dev autoconf automake \
             libtool pkg-config m4 libtool-bin libltdl-dev gettext 
