@@ -49,8 +49,8 @@ jobs:
         run: |
           # Make sure the requirements.txt is present in the repo
           if [ ! -f requirements.txt ]; then
-            #echo "requirements.txt not found!"
-            #exit 1
+            echo "requirements.txt not found!"
+            exit 1
           fi
           cat requirements.txt
           
