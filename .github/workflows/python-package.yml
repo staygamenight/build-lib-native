@@ -80,10 +80,10 @@ jobs:
           #libiconv-hook-dev texinfo
 
           sudo apt-get install repo
-          mkdir -p ~/.bin
-          echo 'PATH="${HOME}/.bin:${PATH}"' >> $GITHUB_ENV
-          curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
-          chmod a+rx ~/.bin/repo
+          #mkdir -p ~/.bin
+          #echo 'PATH="${HOME}/.bin:${PATH}"' >> $GITHUB_ENV
+          #curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
+          #chmod a+rx ~/.bin/repo
           
 
           #wget http://launchpadlibrarian.net/748335974/gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
@@ -137,7 +137,7 @@ jobs:
           #wget https://launchpad.net/ubuntu/+source/portaudio19/19.6.0-1.2build3/+build/28030472/+files/portaudio19-dev_19.6.0-1.2build3_arm64.deb
           #sudo dpkg -i portaudio19-dev_19.6.0-1.2build3_arm64.deb
           
-          sudo apt-get -f install
+          #sudo apt-get -f install
           sudo apt-get install portaudio19-dev:arm64
           #sudo apt-get install libportaudio2
           sudo apt-get install libasound2-dev:arm64
