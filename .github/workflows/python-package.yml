@@ -66,7 +66,7 @@ jobs:
           #sudo dpkg --print-foreign-architecture
           sudo apt-get update
 
-          sudo apt-get install -y autoconf automake \
+          Y | sudo apt-get install -y autoconf automake \
             libtool pkg-config m4 libtool-bin libltdl-dev gettext 
           sudo apt-get install git repo make gcc g++ m4 bison flex
           #sudo apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
