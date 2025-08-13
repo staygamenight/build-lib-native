@@ -21,7 +21,7 @@ defaults:
 
 jobs:
   build:
-    runs-on: windows-latest #ubuntu-24.04-arm #ubuntu-latest #
+    runs-on: windows-latest #ubuntu-24.04-arm #ubuntu-latest #windows-11-arm
  
     steps:
       - name: WSL2
@@ -48,26 +48,26 @@ jobs:
       - name: Upload requirements.txt
         run: |
           # Make sure the requirements.txt is present in the repo
-          #if [ ! -f requirements.txt ]; then
-            #echo "requirements.txt not found!"
-            #exit 1
-          #fi
-          #cat requirements.txt
+          if [ ! -f requirements.txt ]; then
+            echo "requirements.txt not found!"
+            exit 1
+          fi
+          cat requirements.txt
           
       - name: Install Dependencies
         run: |
-          sudo apt-get clean
-          sudo apt-get autoclean
-          sudo rm -rf /var/lib/apt/lists/
-          sudo apt-get update
+          #sudo apt-get clean
+          #sudo apt-get autoclean
+          #sudo rm -rf /var/lib/apt/lists/
+          #sudo apt-get update
 
           #sudo dpkg --add-architecture armhf
           #sudo dpkg --add-architecture arm64
           #sudo dpkg --print-foreign-architecture
           #sudo apt-get update
 
-          Y | sudo apt-get install -y autoconf automake \
-            libtool pkg-config m4 libtool-bin libltdl-dev gettext 
+          #sudo apt-get install -y autoconf automake \
+            #libtool pkg-config m4 libtool-bin libltdl-dev gettext 
           #sudo apt-get install git repo make gcc g++ m4 bison flex
           #sudo apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
           #sudo apt-get install gcc-multilib
