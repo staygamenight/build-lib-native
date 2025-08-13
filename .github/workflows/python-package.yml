@@ -82,7 +82,7 @@ jobs:
 
          
           mkdir -p ~/.bin
-          echo 'PATH="${HOME}/.bin:${PATH}"' >> $GITHUB_ENV
+          echo 'PATH="${HOME}/.bin:${PATH}"'
           curl https://storage.googleapis.com/git-repo-downloads/repo --output ~/.bin/repo
           chmod a+rx ~/.bin/repo
           
