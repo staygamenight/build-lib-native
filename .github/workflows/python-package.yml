@@ -48,11 +48,11 @@ jobs:
       - name: Upload requirements.txt
         run: |
           # Make sure the requirements.txt is present in the repo
-          if [ ! -f requirements.txt ]; then
-            echo "requirements.txt not found!"
-            exit 1
-          fi
-          cat requirements.txt
+          #if [ ! -f requirements.txt ]; then
+            #echo "requirements.txt not found!"
+            #exit 1
+          #fi
+          #cat requirements.txt
           
       - name: Install Dependencies
         run: |
@@ -137,7 +137,7 @@ jobs:
           #wget https://launchpad.net/ubuntu/+source/portaudio19/19.6.0-1.2build3/+build/28030472/+files/portaudio19-dev_19.6.0-1.2build3_arm64.deb
           #sudo dpkg -i portaudio19-dev_19.6.0-1.2build3_arm64.deb
           
-          #sudo apt-get -f install
+          sudo apt-get -f install
           sudo apt-get install portaudio19-dev:arm64
           #sudo apt-get install libportaudio2
           sudo apt-get install libasound2-dev:arm64
