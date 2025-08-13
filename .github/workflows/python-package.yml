@@ -138,8 +138,8 @@ jobs:
           #wget https://launchpad.net/ubuntu/+source/portaudio19/19.6.0-1.2build3/+build/28030472/+files/portaudio19-dev_19.6.0-1.2build3_arm64.deb
           #sudo dpkg -i portaudio19-dev_19.6.0-1.2build3_arm64.deb
           
-          sudo apt-get -f install
-          sudo apt-get install portaudio19-dev
+          #sudo apt-get -f install
+          #sudo apt-get install portaudio19-dev
           #sudo apt-get install libportaudio2
           sudo apt-get install libasound2-dev
 
