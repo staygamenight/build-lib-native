@@ -15,6 +15,10 @@ env:
   ANDROID_HOME: /home/runner/Android
   ANDROID_API_LEVEL: 33 #27 #36
 
+defaults:
+    run:
+        shell: wsl-bash {0}
+
 jobs:
   build:
     runs-on: windows-latest #ubuntu-24.04-arm #ubuntu-latest #
@@ -44,7 +48,7 @@ jobs:
       - name: Upload requirements.txt
         run: |
           # Make sure the requirements.txt is present in the repo
-          #if [ ! -f requirements.txt ]; then
+          if [ ! -f requirements.txt ]; then
             #echo "requirements.txt not found!"
             #exit 1
           fi
