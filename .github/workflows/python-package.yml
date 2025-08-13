@@ -66,14 +66,14 @@ jobs:
           #sudo dpkg --print-foreign-architecture
           #sudo apt-get update
 
-          sudo apt-get install repo
+          #sudo apt-get install repo
           #sudo apt-get install -y autoconf automake \
             #libtool pkg-config m4 libtool-bin libltdl-dev gettext 
           #sudo apt-get install git repo make gcc g++ m4 bison flex
           #sudo apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
           #sudo apt-get install gcc-multilib
           #sudo apt-get install libc6-dev build-essential
-          sudo apt install libffi-dev
+          #sudo apt install libffi-dev
           #sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev \
           #libsqlite3-dev curl libncurses-dev xz-utils tk-dev libxml2-dev \
           #libxmlsec1-dev libffi-dev liblzma-dev \
@@ -81,10 +81,10 @@ jobs:
           #libiconv-hook-dev texinfo
 
          
-          #mkdir -p ~/.bin
-          #echo 'PATH="${HOME}/.bin:${PATH}"' >> $GITHUB_ENV
-          #curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
-          #chmod a+rx ~/.bin/repo
+          mkdir -p ~/.bin
+          echo 'PATH="${HOME}/.bin:${PATH}"' >> $GITHUB_ENV
+          curl https://storage.googleapis.com/git-repo-downloads/repo --output ~/.bin/repo
+          chmod a+rx ~/.bin/repo
           
 
           #wget http://launchpadlibrarian.net/748335974/gcc-14-base_14.2.0-4ubuntu2~24.04_arm64.deb
