@@ -143,9 +143,9 @@ jobs:
           #sudo dpkg -i portaudio19-dev_19.6.0-1.2build3_arm64.deb
           
           sudo apt-get -f install
-          sudo apt-get install portaudio19-dev
+          sudo apt-get -y install portaudio19-dev
           #sudo apt-get install libportaudio2
-          #Y | sudo apt-get install libasound2-dev
+          sudo apt-get -y install libasound2-dev
           
           sudo apt-get -y install python3.10-venv
 
