@@ -67,8 +67,8 @@ jobs:
           #sudo apt-get update
 
           sudo apt -y install libc-bin
-          
           sudo apt-get -y install systemd man-db dbus
+          sudo apt-get install python3-dev
 
           #sudo apt-get install repo
           #sudo apt-get install -y autoconf automake \
