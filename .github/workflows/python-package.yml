@@ -77,7 +77,7 @@ jobs:
           #sudo apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
           #sudo apt-get install gcc-multilib
           #sudo apt-get install libc6-dev build-essential
-          #sudo apt install libffi-dev
+          sudo apt-get -y install libffi-dev
           #sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev \
           #libsqlite3-dev curl libncurses-dev xz-utils tk-dev libxml2-dev \
           #libxmlsec1-dev libffi-dev liblzma-dev \
@@ -143,7 +143,7 @@ jobs:
           #sudo dpkg -i portaudio19-dev_19.6.0-1.2build3_arm64.deb
           
           sudo apt-get -f install
-          #sudo apt-get install portaudio19-dev
+          sudo apt-get install portaudio19-dev
           #sudo apt-get install libportaudio2
           #Y | sudo apt-get install libasound2-dev
           
