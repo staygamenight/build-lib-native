@@ -66,7 +66,7 @@ jobs:
           #sudo dpkg --print-foreign-architecture
           #sudo apt-get update
 
-          sudo apt-get --reinstall -y install libc-bin systemd man-db
+          Y | sudo apt-get --reinstall -y install libc-bin systemd man-db
 
           #sudo apt-get install repo
           #sudo apt-get install -y autoconf automake \
