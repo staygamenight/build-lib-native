@@ -21,7 +21,7 @@ defaults:
 
 jobs:
   build:
-    runs-on: windows-latest #ubuntu-24.04-arm #ubuntu-latest #windows-11-arm
+    runs-on: windows-11-arm #windows-latest #ubuntu-24.04-arm #ubuntu-latest 
  
     steps:
       - name: WSL2
