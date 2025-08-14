@@ -43,7 +43,7 @@ jobs:
       - name: Set up Python 3
         uses: actions/setup-python@v2
         with:
-          python-version: '3.12'
+          python-version: '3.9'
 
       - name: Upload requirements.txt
         run: |
@@ -66,9 +66,9 @@ jobs:
           #sudo dpkg --print-foreign-architecture
           #sudo apt-get update
 
-          Y | sudo apt -y install libc-bin
+          sudo apt -y install libc-bin
           
-          Y | sudo apt-get -y install systemd man-db dbus
+          sudo apt-get -y install systemd man-db dbus
 
           #sudo apt-get install repo
           #sudo apt-get install -y autoconf automake \
@@ -147,7 +147,7 @@ jobs:
           #sudo apt-get install libportaudio2
           #Y | sudo apt-get install libasound2-dev
           
-          Y | sudo apt-get -y install python3.12-venv
+          sudo apt-get -y install python3.9-venv
 
 
       - name: Install Python Dependencies
