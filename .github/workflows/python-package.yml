@@ -68,7 +68,7 @@ jobs:
 
           sudo apt -y install libc-bin
           sudo apt-get -y install systemd man-db dbus
-          sudo apt-get install python3.10-dev
+          sudo apt-get -y install python3.10-dev
 
           #sudo apt-get install repo
           #sudo apt-get install -y autoconf automake \
