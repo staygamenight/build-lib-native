@@ -66,6 +66,12 @@ jobs:
           #sudo dpkg --print-foreign-architecture
           #sudo apt-get update
 
+          sudo mv /var/lib/dpkg/info/libc-bin.* /tmp/
+          sudo dpkg --remove --force-remove-reinstreq libc-bin
+          sudo dpkg --purge libc-bin
+          Y | sudo apt install libc-bin
+          sudo mv /tmp/libc-bin.* /var/lib/dpkg/info/
+          
           Y | sudo apt-get --reinstall -y install libc-bin systemd man-db dbus
 
           #sudo apt-get install repo
