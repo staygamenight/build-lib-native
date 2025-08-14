@@ -66,9 +66,9 @@ jobs:
           #sudo dpkg --print-foreign-architecture
           #sudo apt-get update
 
-          sudo apt -y install libc-bin
+          Y | sudo apt -y install libc-bin
           
-          sudo apt-get -y install systemd man-db dbus
+          Y | sudo apt-get -y install systemd man-db dbus
 
           #sudo apt-get install repo
           #sudo apt-get install -y autoconf automake \
