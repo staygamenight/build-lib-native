@@ -152,7 +152,7 @@ jobs:
           pip install maturin
           #pip install git+https://github.com/T-Dynamos/python-for-android.git #scipy
           pip install git+https://github.com/kivy/python-for-android.git
-          pip install --upgrade pipgrip
+          #pip install --upgrade pipgrip
           pip install --upgrade Cython
           pip install pyaudio
           #arch -arm64
