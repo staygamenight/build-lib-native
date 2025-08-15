@@ -143,9 +143,9 @@ jobs:
           #sudo dpkg -i portaudio19-dev_19.6.0-1.2build3_arm64.deb
           
           sudo apt-get -f install
-          sudo apt-get -y install portaudio19-dev
+          sudo apt-get -y install portaudio19-dev:arm64
           #sudo apt-get install libportaudio2
-          sudo apt-get -y install libasound2-dev
+          sudo apt-get -y install libasound2-dev:arm64
           #portaudio19-dev:arm64 #libasound2-dev:arm64
           
           sudo apt-get -y install python3.10-venv
@@ -155,7 +155,7 @@ jobs:
         run: |
           python3 -m venv .venv
           source .venv/bin/activate
-          pip install --upgrade pip
+          #pip install --upgrade pip
           pip install maturin
           #pip install git+https://github.com/T-Dynamos/python-for-android.git #scipy
           pip install git+https://github.com/kivy/python-for-android.git
