@@ -56,15 +56,15 @@ jobs:
           
       - name: Install Dependencies
         run: |
-          sudo apt-get clean
-          sudo apt-get autoclean
-          sudo rm -rf /var/lib/apt/lists/
-          sudo apt-get update
+          #sudo apt-get clean
+          #sudo apt-get autoclean
+          #sudo rm -rf /var/lib/apt/lists/
+          #sudo apt-get update
 
           #sudo dpkg --add-architecture armhf
-          sudo dpkg --add-architecture arm64
+          #sudo dpkg --add-architecture arm64
           #sudo dpkg --print-foreign-architecture
-          sudo apt-get update --fix-missing --allow-releaseinfo-change
+          #sudo apt-get update --fix-missing --allow-releaseinfo-change
 
           sudo apt -y install libc-bin
           sudo apt-get -y install systemd man-db dbus
@@ -183,27 +183,51 @@ jobs:
           echo ${{env.ANDROID_HOME}}
           echo ${{env.ANDROID_API_LEVEL}}
           
-          echo "ANDROID_SDK_HOME=${{env.ANDROID_HOME}}/android-sdk"  >> $GITHUB_ENV
-          #echo "ANDROID_SDK_TOOLS_ARCHIVE=commandlinetools-linux-${{env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip"  >> $GITHUB_ENV
-          #echo "ANDROID_SDK_TOOLS_DL_URL=https://dl.google.com/android/repository/commandlinetools-linux-${{env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip"  >> $GITHUB_ENV
-          echo "ANDROID_SDK_TOOLS_ARCHIVE=android-sdk-aarch64.zip"  >> $GITHUB_ENV
-          echo "ANDROID_SDK_TOOLS_DL_URL=https://github.com/lzhiyong/termux-ndk/releases/download/android-sdk/android-sdk-aarch64.zip"  >> $GITHUB_ENV
+          echo "ANDROID_SDK_HOME=${{env.ANDROID_HOME}}/android-sdk"
+          #echo "ANDROID_SDK_TOOLS_ARCHIVE=commandlinetools-linux-${{env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip"
+          #echo "ANDROID_SDK_TOOLS_DL_URL=https://dl.google.com/android/repository/commandlinetools-linux-${{env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip"
+          echo "ANDROID_SDK_TOOLS_ARCHIVE=android-sdk-aarch64.zip"
+          echo "ANDROID_SDK_TOOLS_DL_URL=https://github.com/lzhiyong/termux-ndk/releases/download/android-sdk/android-sdk-aarch64.zip"
           
-          echo "ANDROID_NDK_HOME=${{env.ANDROID_HOME}}/android-ndk"  >> $GITHUB_ENV
-          echo "ANDROID_NDK_FOLDER=${{env.ANDROID_HOME}}/android-ndk-r${{env.ANDROID_NDK_VERSION}}"  >> $GITHUB_ENV
-          #echo "ANDROID_NDK_ARCHIVE=android-ndk-r${{env.ANDROID_NDK_VERSION}}-linux.zip"  >> $GITHUB_ENV
-          echo "ANDROID_NDK_ARCHIVE=android-ndk-r27b-aarch64.zip"  >> $GITHUB_ENV
+          echo "ANDROID_NDK_HOME=${{env.ANDROID_HOME}}/android-ndk"
+          echo "ANDROID_NDK_FOLDER=${{env.ANDROID_HOME}}/android-ndk-r${{env.ANDROID_NDK_VERSION}}"
+          #echo "ANDROID_NDK_ARCHIVE=android-ndk-r${{env.ANDROID_NDK_VERSION}}-linux.zip"
+          echo "ANDROID_NDK_ARCHIVE=android-ndk-r27b-aarch64.zip"
           
-          echo "ANDROID_NDK_HOME_LEGACY=${{env.ANDROID_HOME}}/android-ndk-legacy"  >> $GITHUB_ENV
-          echo "ANDROID_NDK_FOLDER_LEGACY=${{env.ANDROID_HOME}}/android-ndk-r${{env.ANDROID_NDK_VERSION_LEGACY}}"  >> $GITHUB_ENV
-          echo "ANDROID_NDK_ARCHIVE_LEGACY=android-ndk-r${{env.ANDROID_NDK_VERSION_LEGACY}}-linux-x86_64.zip"  >> $GITHUB_ENV
+          echo "ANDROID_NDK_HOME_LEGACY=${{env.ANDROID_HOME}}/android-ndk-legacy"
+          echo "ANDROID_NDK_FOLDER_LEGACY=${{env.ANDROID_HOME}}/android-ndk-r${{env.ANDROID_NDK_VERSION_LEGACY}}"
+          echo "ANDROID_NDK_ARCHIVE_LEGACY=android-ndk-r${{env.ANDROID_NDK_VERSION_LEGACY}}-linux-x86_64.zip"
           
-          echo "ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64=gcc-arm64-linux-x86_64.tar.bz2"  >> $GITHUB_ENV
-          echo "ANDROID_NDK_GFORTRAN_ARCHIVE_ARM=gcc-arm-linux-x86_64.tar.bz2"  >> $GITHUB_ENV
+          echo "ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64=gcc-arm64-linux-x86_64.tar.bz2"
+          echo "ANDROID_NDK_GFORTRAN_ARCHIVE_ARM=gcc-arm-linux-x86_64.tar.bz2"
           
-          #echo "ANDROID_NDK_DL_URL=https://dl.google.com/android/repository/android-ndk-r${{env.ANDROID_NDK_VERSION}}-linux.zip"  >> $GITHUB_ENV
-          echo "ANDROID_NDK_DL_URL_LEGACY=https://dl.google.com/android/repository/android-ndk-r${{env.ANDROID_NDK_VERSION_LEGACY}}-linux-x86_64.zip"  >> $GITHUB_ENV
-          echo "ANDROID_NDK_DL_URL=https://github.com/lzhiyong/termux-ndk/releases/download/android-ndk/android-ndk-r27b-aarch64.zip"  >> $GITHUB_ENV
+          #echo "ANDROID_NDK_DL_URL=https://dl.google.com/android/repository/android-ndk-r${{env.ANDROID_NDK_VERSION}}-linux.zip"
+          echo "ANDROID_NDK_DL_URL_LEGACY=https://dl.google.com/android/repository/android-ndk-r${{env.ANDROID_NDK_VERSION_LEGACY}}-linux-x86_64.zip"
+          echo "ANDROID_NDK_DL_URL=https://github.com/lzhiyong/termux-ndk/releases/download/android-ndk/android-ndk-r27b-aarch64.zip"
+
+          
+          
+          #echo "ANDROID_SDK_HOME=${{env.ANDROID_HOME}}/android-sdk"  >> $GITHUB_ENV
+          ##echo "ANDROID_SDK_TOOLS_ARCHIVE=commandlinetools-linux-${{env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip"  >> $GITHUB_ENV
+          ##echo "ANDROID_SDK_TOOLS_DL_URL=https://dl.google.com/android/repository/commandlinetools-linux-${{env.ANDROID_SDK_TOOLS_VERSION}}_latest.zip"  >> $GITHUB_ENV
+          #echo "ANDROID_SDK_TOOLS_ARCHIVE=android-sdk-aarch64.zip"  >> $GITHUB_ENV
+          #echo "ANDROID_SDK_TOOLS_DL_URL=https://github.com/lzhiyong/termux-ndk/releases/download/android-sdk/android-sdk-aarch64.zip"  >> $GITHUB_ENV
+          
+          #echo "ANDROID_NDK_HOME=${{env.ANDROID_HOME}}/android-ndk"  >> $GITHUB_ENV
+          #echo "ANDROID_NDK_FOLDER=${{env.ANDROID_HOME}}/android-ndk-r${{env.ANDROID_NDK_VERSION}}"  >> $GITHUB_ENV
+          ##echo "ANDROID_NDK_ARCHIVE=android-ndk-r${{env.ANDROID_NDK_VERSION}}-linux.zip"  >> $GITHUB_ENV
+          #echo "ANDROID_NDK_ARCHIVE=android-ndk-r27b-aarch64.zip"  >> $GITHUB_ENV
+          
+          #echo "ANDROID_NDK_HOME_LEGACY=${{env.ANDROID_HOME}}/android-ndk-legacy"  >> $GITHUB_ENV
+          #echo "ANDROID_NDK_FOLDER_LEGACY=${{env.ANDROID_HOME}}/android-ndk-r${{env.ANDROID_NDK_VERSION_LEGACY}}"  >> $GITHUB_ENV
+          #echo "ANDROID_NDK_ARCHIVE_LEGACY=android-ndk-r${{env.ANDROID_NDK_VERSION_LEGACY}}-linux-x86_64.zip"  >> $GITHUB_ENV
+          
+          #echo "ANDROID_NDK_GFORTRAN_ARCHIVE_ARM64=gcc-arm64-linux-x86_64.tar.bz2"  >> $GITHUB_ENV
+          #echo "ANDROID_NDK_GFORTRAN_ARCHIVE_ARM=gcc-arm-linux-x86_64.tar.bz2"  >> $GITHUB_ENV
+          
+          ##echo "ANDROID_NDK_DL_URL=https://dl.google.com/android/repository/android-ndk-r${{env.ANDROID_NDK_VERSION}}-linux.zip"  >> $GITHUB_ENV
+          #echo "ANDROID_NDK_DL_URL_LEGACY=https://dl.google.com/android/repository/android-ndk-r${{env.ANDROID_NDK_VERSION_LEGACY}}-linux-x86_64.zip"  >> $GITHUB_ENV
+          #echo "ANDROID_NDK_DL_URL=https://github.com/lzhiyong/termux-ndk/releases/download/android-ndk/android-ndk-r27b-aarch64.zip"  >> $GITHUB_ENV
           
           
       - name: Set up Android SDK
@@ -216,7 +240,8 @@ jobs:
           #echo "ANDROID_SDK_ROOT=$HOME/Android/Sdk" >> $GITHUB_ENV
           #echo "SDK_ROOT=$HOME/Android/Sdk" >> $GITHUB_ENV
           #echo "ANDROID_NDK_HOME=/home/runner/Android/Sdk/ndk/28.2.13676358" >> $GITHUB_ENV
-          echo "LEGACY_NDK=${{env.ANDROID_HOME}}/android-ndk-legacy" >> $GITHUB_ENV
+          echo "LEGACY_NDK=${{env.ANDROID_HOME}}/android-ndk-legacy"
+          #echo "LEGACY_NDK=${{env.ANDROID_HOME}}/android-ndk-legacy" >> $GITHUB_ENV
           #echo "PATH=$PATH:$HOME/Android/Sdk/cmdline-tools/latest/bin:$HOME/Android/Sdk/platform-tools:$ANDROID_NDK_HOME" >> $GITHUB_ENV
 
           #yes | $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.0"
