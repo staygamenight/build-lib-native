@@ -59,12 +59,12 @@ jobs:
           #sudo apt-get clean
           #sudo apt-get autoclean
           #sudo rm -rf /var/lib/apt/lists/
-          sudo apt-get update
+          #sudo apt-get update
 
           sudo dpkg --add-architecture armhf
           sudo dpkg --add-architecture arm64
           #sudo dpkg --print-foreign-architecture
-          #sudo apt-get update
+          sudo apt-get update
 
           sudo apt -y install libc-bin
           sudo apt-get -y install systemd man-db dbus
