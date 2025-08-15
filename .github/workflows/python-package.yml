@@ -64,7 +64,7 @@ jobs:
           #sudo dpkg --add-architecture armhf
           sudo dpkg --add-architecture arm64
           #sudo dpkg --print-foreign-architecture
-          #sudo apt-get update --fix-missing
+          sudo apt-get update --fix-missing --allow-releaseinfo-change
 
           sudo apt -y install libc-bin
           sudo apt-get -y install systemd man-db dbus
