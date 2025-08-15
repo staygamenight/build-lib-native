@@ -27,7 +27,7 @@ jobs:
       - name: WSL2
         uses: Vampire/setup-wsl@v6
         with:
-          distribution: Ubuntu-22.04-arm
+          distribution: Ubuntu-22.04
           wsl-version: 2
       
       - name: Checkout code
